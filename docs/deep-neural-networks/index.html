@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>DEEP NEURAL NETWORKS:
+A LAYMAN’S INTRODUCTION</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../assets/main/css/main.css%3Fv=4172a7fad5.css" />
+    <noscript><link rel="stylesheet" href="../assets/main/css/noscript.css%3Fv=4172a7fad5.css" /></noscript>
+
+    <link rel="shortcut icon" href="../favicon.png" type="image/png" />
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="amp/index.html" />
+    
+    <meta property="og:site_name" content="The Rational Optimist" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="DEEP NEURAL NETWORKS:
+A LAYMAN’S INTRODUCTION" />
+    <meta property="og:description" content="An article I wrote about Deep Neural Networks in Simple Layman&#x27;s terms. It has a nice biomedical approach to the topic and included further resources on how to learn and explore about this field." />
+    <meta property="og:url" content="http://localhost:2368/deep-neural-networks/" />
+    <meta property="og:image" content="http://localhost:2368/content/images/2020/06/F2.large.jpg" />
+    <meta property="article:published_time" content="2018-04-15T13:12:00.000Z" />
+    <meta property="article:modified_time" content="2020-06-04T13:28:54.000Z" />
+    <meta property="article:tag" content="AI" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DEEP NEURAL NETWORKS:
+A LAYMAN’S INTRODUCTION" />
+    <meta name="twitter:description" content="An article I wrote about Deep Neural Networks in Simple Layman&#x27;s terms. It has a nice biomedical approach to the topic and included further resources on how to learn and explore about this field." />
+    <meta name="twitter:url" content="http://localhost:2368/deep-neural-networks/" />
+    <meta name="twitter:image" content="http://localhost:2368/content/images/2020/06/F2.large.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Kithmin Randula Bandara Wickramasinghe" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="AI" />
+    <meta name="twitter:site" content="@tryghost" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="696" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "The Rational Optimist",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Kithmin Randula Bandara Wickramasinghe",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/content/images/2020/05/Pic--2-.jpg",
+            "width": 203,
+            "height": 204
+        },
+        "url": "http://localhost:2368/author/kithmin/",
+        "sameAs": []
+    },
+    "headline": "DEEP NEURAL NETWORKS:\nA LAYMAN’S INTRODUCTION",
+    "url": "http://localhost:2368/deep-neural-networks/",
+    "datePublished": "2018-04-15T13:12:00.000Z",
+    "dateModified": "2020-06-04T13:28:54.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:2368/content/images/2020/06/F2.large.jpg",
+        "width": 1280,
+        "height": 696
+    },
+    "keywords": "AI",
+    "description": "An article I wrote about Deep Neural Networks in Simple Layman&#x27;s terms. It has a nice biomedical approach to the topic and included further resources on how to learn and explore about this field.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 3.15" />
+    <link rel="alternate" type="application/rss+xml" title="The Rational Optimist" href="../rss/index.html" />
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        processEscapes: true
+    }
+});
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168500818-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-168500818-1');
+</script>
+
+    <style>#wrapper>.bg {background-image: url(../assets/images/overlay.png%3Fv=4172a7fad5),linear-gradient(0deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url("../content/images/2020/05/pJhlkBc-batman-wallpaper-1920x1080-1.jpg") }</style>
+
+</head>
+<body class="is-preload post-template tag-ai">
+
+    <div id="wrapper" >
+
+
+        <header id="header">
+                <a href="../index.html" class="logo">The Rational Optimist</a>
+        </header>
+
+            <nav id="nav">
+    <ul class="links">
+        <li class="nav-home "><a href="../index.html">Home</a></li>
+        <li class="nav-research "><a href="../tag/research/index.html">Research</a></li>
+        <li class="nav-ai "><a href="../tag/ai/index.html">AI</a></li>
+        <li class="nav-biomed "><a href="../tag/biomed/index.html">Biomed</a></li>
+        <li class="nav-robotics "><a href="../tag/robotics/index.html">Robotics</a></li>
+        <li class="nav-higher-studies "><a href="../tag/higherstudies/index.html">Higher Studies</a></li>
+        <li class="nav-travel "><a href="../tag/travel/index.html">Travel</a></li>
+        <li class="nav-author "><a href="../author/index.html">Author</a></li>
+    </ul>
+    <ul class="icons">
+        <li><a href="https://twitter.com/tryghost" class="icon fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://www.facebook.com/ghost" class="icon fa-facebook" title="Facebook"><span class="label">Facebook</span></a></li>
+        <li><a href="https://feedly.com/i/subscription/feed/http://localhost:2368/rss/" class="icon fa-rss" target="_blank" rel="noopener"><span class="label" title="RSS">RSS</span></a></li>
+    </ul>
+</nav>
+
+
+        
+
+<main id="main">
+
+    <section class="post">
+
+        <header class="major">
+            <span class="date">April 15, 2018</span>
+            <h1>DEEP NEURAL NETWORKS:
+A LAYMAN’S INTRODUCTION</h1>
+                <p class="content">An article I wrote about Deep Neural Networks in Simple Layman&#x27;s terms. It has a nice biomedical approach to the topic and included further resources on how to learn and explore about this field.</p>
+        </header>
+
+        <div class="image main"><img src="../content/images/2020/06/F2.large.jpg" alt="DEEP NEURAL NETWORKS:
+A LAYMAN’S INTRODUCTION" /></div>
+
+        <div class="content">
+            <p>Have you heard of this popular term called “Artificial Intelligence”? Do you know where it comes from, what it is governed by or how it really works?</p><p>No??</p><p>Well… neither do we.</p><p>But we do know a bit about DNN’s - That’s why.. this article is about Deep Neural Networks. We thought of sharing a small idea about this amazing and hot topic.</p><h2 id="the-future">The Future</h2><p>Why is AI (Artificial Intelligence) a hot topic?</p><p>As you may have guessed, it is because of it being so modern. Many researchers and top minds in the world work in this field. Companies invest a lot of money in this field. Everyone wants a part in this huge surge.</p><p>Before we begin, to give an idea as to why this topic is important; I guess the best statement we can provide for that is</p><ul><li>Experience with Artificial Intelligence is the top skill employers look for in people applying for jobs in the technical industry – regardless of you being a programmer or not. Don’t believe it? – Read it yourself.   <a href="https://www.forbes.com/sites/forbestechcouncil/2017/12/21/13-top-tech-skills-in-high-demand-for-2018/#32d21bd61e5c">https://www.forbes.com/sites/forbestechcouncil/2017/12/21/13-top-tech-skills-in-high-demand-for-2018/#32d21bd61e5c</a></li><li>Even if you are in management; handling a team of people having AI experience will test your own capability with this subject.</li></ul><p>Like it or not, Deep Learning is going to play a massive role in the future. For anyone in any field (okay… almost any field), this will be a really valuable tool. And for everyone, having a rough idea on Deep Learning will be definitely useful.</p><p>An icon in this field, Andrew Ng says the following. Electricity changed the entire world about a century back. The way everything worked changed. Deep Learning is the new electricity. It’s already begun to revolutionize the world! You need to embrace it.</p><h2 id="introduction">Introduction</h2><p>Where did this all start?</p><p>When researchers started to investigate on ways to simulate or model biological structures to create computer or engineering systems, they noticed that the structure of the biological NERVOUS SYSTEM was a very interesting and motivating phenomenon.</p><p>Even though we do not fully understand it, the modelling of biological nervous systems, (or biological neural networks) led to something referred to as artificial neural networks (ANN’s) – a term used today to coin computer generated neural network modelling.</p><p>So how do these biological NN’s and ANN’s relate? The structure of the Neuron plays an important role in this connection as well. This is a part of biology.</p><p>Try this video crash course! You will love it! - <a href="https://www.youtube.com/watch?v=qPix_X-9t7E">https://www.youtube.com/watch?v=qPix_X-9t7E</a></p><h2 id="the-neural-network-approach">The Neural Network Approach</h2><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2020/06/image-26.png" class="kg-image"><figcaption>A biological neuron</figcaption></figure><p>In the late 1970’s, the neural network concept began to gain attention, and became a practical idea by the 1980’s. So what really is this concept? Here is a neuron.</p><p>It is a very simple analogy. An artificial neuron is said to have the same constructs as a biological neuron or nerve cell. Did you watch the crash course videos? If you know how the neurons work, then you will quickly understand how artificial neurons work.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2020/06/image-25.png" class="kg-image"><figcaption>An artificial neuron</figcaption></figure><p>As you can see, the artificial neuron is a mathematically constructed definition of how the biological neuron is made up of. The inputs bring in the information, then they are weighted and summed up, and finally if the result is above the threshold, then the output/activation is given out. Quite simple is it not?</p><p>Okay now.. then what are Deep Neural Networks and what can we do with them?</p><h2 id="deep-neural-networks-dnns-">Deep Neural Networks (DNNs)</h2><p>What if we increased more and more layers in a neural network? And created a huge (or in this case DEEP) neural network. Like this (think of each circle as a neuron);</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2020/06/image-24.png" class="kg-image"><figcaption>Two different types of Neural Networks</figcaption></figure><p>If you have some experience with programming, you’ll know that a task like looking at a picture and telling whether it’s a hotdog or not is extremely difficult for a computer (<a href="https://www.youtube.com/watch?v=ACmydtFDTGs">this</a> is funny). Learning representations in data is hard. Neural networks do something called representational learning: identifying patterns and representing that data internally in its own way. So a neural network trained on hotdog images would internally represent those images in some way.</p><p>More depth (in DNNs) simply means ability to learn more complex representations. A deeper neural network can identify more complex patterns in the data input to it. These DNNs are only revolutionizing the world today: every sector is feeling its effects quite strong. They’re taking over vision and robotics, sound analysis, automation, financial analysis, decision making, and so many other tasks previously deemed impossible for computers.</p><p>Quite soon, Deep Learning will be a skill everyone requires, just like being familiar with how to use the internet is essential for everyone. The reason is the large number of deep learning APIs and platforms present today: there are systems as user friendly as MS Word that allow you to train massive DNNs on massive datasets with close to no knowledge. Even better, there are tool that allow you to use already trained DNNs specialized for all sorts of tasks: these actually require no DNNs knowledge at all.</p><h2 id="don-t-believe-us">Don’t believe us?</h2><p>So any Neural Network (including all DNNs) have two significant stages associated to them. First is the manufacturing stage, termed as training, where we use all sorts of algorithms to internally construct the representations of data we want it to store. This can be likened to a human brain storing what is a hotdog and what isn’t after someone shows you lots of pictures of hotdogs. Or when you meet Barney, you remember who is Barney (from his face) and who isn’t Barney (everyone who’s face doesn’t look like that). We used a fancy term: “pretrained DNNs”. These are DNNs that were already taught something. If you’re going to use one of these (this is a good starting point for a beginner, as well as anyone who doesn’t look to go to research but just build stuff using these), you don’t need any knowledge at all about  DNNs. All you need is to get familiar with the available platforms and tools. Tensorflow has some great pre-trained models you can use for certain work. Amazon and IBM have some even more user-friendly APIs you can use for image-processing and natural language processing. Google has a fair share of their APIs too. These are great for integrating into work. Some are just as simple as sending a request with a picture and receiving response with details of what’s in the picture, and also all the objects in it completely segmented and classified by their name.</p><p>So once you have your hands on a trained DNN, all you do is “inference”. Just like you’d use what’s in your head to look at a picture of me and realize I’m not Barney, the inference stage is about taking new inputs and using our internal representations (within the DNN) of hotdogs to see if the new pictures are hotdogs or not. So someone working with applications of DNNs, this is all you would need to work with.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2020/06/image-23.png" class="kg-image"><figcaption>The steps involved in working with DNNs</figcaption></figure><h2 id="further-info">Further Info</h2><p>If you like this topic, and want to learn further on your own; try out this course for free! You don’t have to be a computer programmer.</p><p><a href="https://courses.nvidia.com/courses/course-v1:DLI+C-FX-01+V2/about">https://courses.nvidia.com/courses/course-v1:DLI+C-FX-01+V2/about</a></p><h2 id="what-can-we-do">What can we do?</h2><p>You can try out some great tutorials available online to get your hands dirty with DNNs. Here is a great place to start your work: <a href="https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/#0">https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/#0</a>. Python is a popular language used in the Deep Learning community so I would suggest starting off with it.</p><p>If you’re using windows, installing all the libraries may be time consuming; we would strongly suggest using an environment and package manager like <strong>Ananconda</strong>. Even for Linux uses, this just makes life a lot easier.</p><p>Start this off today itself! Do not take my word for it. After doing this you’ll realize you need no DNNs knowledge to get a DNN running. Though you’ll need a bit of programming knowledge to setup the stuff. If all this looks Greek to you and still want to try out something, don’t worry. You’ll realize DNNs have be made accessible to an unbelievable extent.</p><h2 id="total-beginner">Total Beginner?</h2><p>Google and Microsoft have some cool APIs you should check out.</p><p><a href="https://cloud.google.com/vision/">https://cloud.google.com/vision/</a></p><p><a href="https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/">https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/</a></p><p>Also here’s some interesting work which had a graduate from our university involved as well.</p><p><a href="http://www.robots.ox.ac.uk/~szheng/crfasrnndemo">http://www.robots.ox.ac.uk/~szheng/crfasrnndemo</a></p><p>For many people from web developers to embedded device people, these kind of APIs are going to be extremely useful. Also, most pretrained DNNs can be run (the inference part) completely on your front-end (in JS) and even on an embedded device (in C). That's all for this post.</p><p>Cheers.</p><p>Thank you!</p><p>Written by Kanchana Ranasinghe and Kithmin Wickramasinghe.</p>
+        </div>
+
+
+        <footer class="post-footer">
+
+            <div class="authors">
+                <a class="author-box" href="../author/kithmin/index.html">
+                    <img class="author-profile-image" src="../content/images/2020/05/Pic--2-.jpg" alt="Kithmin Randula Bandara Wickramasinghe" />
+                    <section class="author-box-content">
+                        <div class="author-box-label">Author</div>
+                        <h5 class="author-box-name">Kithmin Randula Bandara Wickramasinghe</h5>
+                        <p>Read more posts by this author.</p>
+                    </section>
+                </a>
+            </div>
+
+        </footer>
+        <section class="post-full-comments">
+            <div id="disqus_thread"></div>
+            <script>
+            var disqus_config = function () {
+                this.page.url = "http://localhost:2368/deep-neural-networks/";  
+                this.page.identifier = "ghost-5ed8f2e2b305d65958561d33"
+            };
+            (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://kithminr1995.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+            </script>
+        </section>
+    </section>
+
+</main>
+
+
+<script>
+    var images = document.querySelectorAll('.kg-gallery-image img');
+    images.forEach(function (image) {
+        var container = image.closest('.kg-gallery-image');
+        var width = image.attributes.width.value;
+        var height = image.attributes.height.value;
+        var ratio = width / height;
+        container.style.flex = ratio + ' 1 0%';
+    })
+</script>
+
+
+        <div id="copyright">
+            <ul>
+                <li>&copy; The Rational Optimist</li>
+                <li>Design by <a href="https://html5up.net">HTML5 UP</a></li>
+                <li>Published with <a href="https://ghost.org">Ghost</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <script src="../assets/main/js/jquery.min.js%3Fv=4172a7fad5"></script>
+    <script src="../assets/main/js/jquery.scrollex.min.js%3Fv=4172a7fad5"></script>
+    <script src="../assets/main/js/jquery.scrolly.min.js%3Fv=4172a7fad5"></script>
+    <script src="../assets/main/js/browser.min.js%3Fv=4172a7fad5"></script>
+    <script src="../assets/main/js/breakpoints.min.js%3Fv=4172a7fad5"></script>
+    <script src="../assets/main/js/util.js%3Fv=4172a7fad5"></script>
+    <script src="../assets/main/js/main.js%3Fv=4172a7fad5"></script>
+
+    
+
+</body>
+</html>
