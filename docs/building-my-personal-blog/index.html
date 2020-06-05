@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <!--
-    Theme modified by:
+    Design by:
     ——————————
         GODO FREDO
         ✉ https://godofredo.ninja
         ✎ @GodoFredoNinja
         ✈ Lima - Perú
 -->
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
     <title>Building my personal blog ✍️</title>
     <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css%3Fv=90e7330248.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/styles/main.css%3Fv=23811bec1d.css"/>
 
     <link rel="shortcut icon" href="../favicon.png" type="image/png" />
     <link rel="canonical" href="index.html" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
-    <link rel="amphtml" href="amp/index.html" />
+    <link rel="amphtml" href="amp.html" />
     
     <meta property="og:site_name" content="The Rational Optimist" />
     <meta property="og:type" content="article" />
@@ -117,116 +114,175 @@ MathJax.Hub.Config({
   gtag('config', 'UA-168500818-1');
 </script>
 
+    <script>
+        if (typeof(Storage) !== 'undefined') {
+            var selectTheme = localStorage.getItem('selected-theme');
+            if (selectTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark')
+            } else if (selectTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        }
+    </script>
 </head>
-<body class="post-template tag-research">
+<body class="is-article">
 
-    <div class="site-wrapper">
+    <div class="site-wrapper u-flexColumnTop">
+        <header class="header u-sizeFullWidth u-flexCenter">
+    <div class="header-wrap u-relative u-flexCenter u-flex--1">
+        <a class="header-logo u-inlineBlock u-flex0" href="../index.html">
+                <span class="u-fontSize26 u-fontWeightBold u-lineHeight1">The Rational Optimist</span>
+        </a>
 
-        
+        <nav class="mainMenu u-flex u-flex1 u-paddingLeft20 u-flexCenter u-hide-before-lg">
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="../index.html">Home</a></li>
+    <li class="nav-research" role="menuitem"><a href="../tag/research/index.html">Research</a></li>
+    <li class="nav-ai" role="menuitem"><a href="../tag/ai/index.html">AI</a></li>
+    <li class="nav-biomed" role="menuitem"><a href="../tag/biomed/index.html">Biomed</a></li>
+    <li class="nav-robotics" role="menuitem"><a href="../tag/robotics/index.html">Robotics</a></li>
+    <li class="nav-higher-studies" role="menuitem"><a href="../tag/higherstudies/index.html">Higher Studies</a></li>
+    <li class="nav-travel" role="menuitem"><a href="../tag/travel/index.html">Travel</a></li>
+    <li class="nav-author" role="menuitem"><a href="../author/index.html">Author</a></li>
+</ul>
 
-<header class="site-header">
-    <div class="outer site-nav-main">
-    <div class="inner">
-        <nav class="site-nav">
-    <div class="site-nav-left">
-        <div class="site-nav-left-content">
-                <a class="site-nav-logo gradient-text" href="../index.html">The Rational Optimist</a>
-            <div class="site-nav-content site-nav-in-mobile">
-                        <ul class="nav" role="menu">
-            <li class="nav-home" role="menuitem"><a href="../index.html">Home</a></li>
-            <li class="nav-research" role="menuitem"><a href="../tag/research/index.html">Research</a></li>
-            <li class="nav-ai" role="menuitem"><a href="../tag/ai/index.html">AI</a></li>
-            <li class="nav-biomed" role="menuitem"><a href="../tag/biomed/index.html">Biomed</a></li>
-            <li class="nav-robotics" role="menuitem"><a href="../tag/robotics/index.html">Robotics</a></li>
-            <li class="nav-higher-studies" role="menuitem"><a href="../tag/higherstudies/index.html">Higher Studies</a></li>
-            <li class="nav-travel" role="menuitem"><a href="../tag/travel/index.html">Travel</a></li>
-            <li class="nav-author" role="menuitem"><a href="../author/index.html">Author</a></li>
-    </ul>
+        </nav>
 
-                    <span class="nav-post-title dash">Building my personal blog ✍️</span>
+        <ul class="header-left u-flex0 u-flex u-flexEnd u-unstyled">
+            <li class="dropdown u-hide-before-lg u-relative">
+                <div class="hla u-fontSizeSmaller">Follow <svg class="icon icon--s top2"><use xlink:href="#icon-arrow"></use></svg></div>
+
+                <div class="header-dropdown-menu drop-content u-absolute">
+                    <div class="header-social-media drop-border js-social-media u-flex u-marginBottom30 u-paddingBottom20">
+                        <a href="https://www.facebook.com/ghost" title="Facebook ghost" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-facebook"></use></svg></a>
+                        <a href="https://twitter.com/tryghost"  title="Twitter @tryghost" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-twitter"></use></svg></a>
+                    </div>
+
+                </div>
+            </li>
+
+            <li><div class="js-dark-mode hla header-dark-mode">
+                <svg class="icon icon--m icon--moon top2"><use xlink:href="#icon-moon"></use></svg>
+                <svg class="icon icon--m icon--sunny top2 u-hide"><use xlink:href="#icon-sunny"></use></svg>
+            </div></li>
+
+
+            <li class="js-search-open search-toggle u-relative u-hide"><div class="hla"><svg class="icon icon--m top2"><use xlink:href="#icon-search"></use></svg></div></li>
+            <li class="u-hide-after-lg" style="margin-right:-10px"><div class="hla menu-burger js-menu-toggle u-relative"><span></span><span></span><span></span></div></li>
+        </ul>
+    </div>
+</header>
+
+<aside class="sideNav u-absolute0 u-hide-after-lg">
+    <div class="sideNav-wrap u-absolute0">
+        <nav class="sideNav-item sideNav-menu u-fontSizeBase">
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="../index.html">Home</a></li>
+    <li class="nav-research" role="menuitem"><a href="../tag/research/index.html">Research</a></li>
+    <li class="nav-ai" role="menuitem"><a href="../tag/ai/index.html">AI</a></li>
+    <li class="nav-biomed" role="menuitem"><a href="../tag/biomed/index.html">Biomed</a></li>
+    <li class="nav-robotics" role="menuitem"><a href="../tag/robotics/index.html">Robotics</a></li>
+    <li class="nav-higher-studies" role="menuitem"><a href="../tag/higherstudies/index.html">Higher Studies</a></li>
+    <li class="nav-travel" role="menuitem"><a href="../tag/travel/index.html">Travel</a></li>
+    <li class="nav-author" role="menuitem"><a href="../author/index.html">Author</a></li>
+</ul>
+
+        </nav>
+
+
+        <div class="sideNav-item sideNav-follow u-flex u-flexContentAround js-social-media">
+            <a title="Facebook ghost" href="https://www.facebook.com/ghost" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-facebook"></use></svg></a>
+            <a title="Twitter @tryghost" href="https://twitter.com/tryghost" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-twitter"></use></svg></a>
+        </div>
+    </div>
+</aside>
+        <main class="site-main ">
+
+
+<div class="post extreme-container u-marginTop30 u-marginBottom40">
+    <div class="row">
+        <article class="col col-left">
+            <div class="post-header u-marginBottom20">
+    <h1 class="post-title u-fontSizeLargest u-md-fontSizeLarger">Building my personal blog ✍️</h1>
+    <p class="post-excerpt u-fontSize20 u-marginTop20 text-muted">This is an article about the obstacles I faced and the knowledge I gained in figuring out an elegant set of steps to develop my very own free self-hosted personal blog.  I hope you enjoy it and use this as a starting point to build your very own blog.</p>
+</div>
+
+            <div class="post-author u-flex u-flexCenter">
+    <div class="u-flex0">
+        <a href="../author/kithmin/index.html" class="avatar-image avatar-image--smaller u-relative">
+            <img class="u-absolute u-image u-block u-round"
+                src="../content/images/size/w100/2020/05/Pic--2-.jpg"
+                alt="Go to the profile of Kithmin Randula Bandara Wickramasinghe"
+            />
+        </a>
+    </div>
+
+    <div class="u-paddingLeft15 text-muted u-flex1 u-fontSize15 u-lineHeight1">
+        <div class="u-flexCenter u-block-before-md">
+            <time class="datetime" datetime=" 2020-06-02 ">Published 2 June 2020</time>
+            <span class="separate"></span>
+            <span class="readingTime">9 min read</span>
+        </div>
+
+        <div class="u-block u-paddingTop5">
+            By <a href="../author/kithmin/index.html" class="link link--underline u-fontWeightMedium u-textColorDarker" title="Posts by Kithmin Randula Bandara Wickramasinghe">Kithmin Randula Bandara Wickramasinghe</a>
+
+            
+            
+        </div>
+    </div>
+</div>
+                <figure class="post-image u-block u-marginAuto u-marginTop30 u-maxWidth1200">
+        <img class="post-img u-block u-marginAuto"
+            srcset="../content/images/size/w300/2020/05/1_Bo0AHvG_vb2KBV7unCCptA.png 300w,
+                   ../content/images/size/w600/2020/05/1_Bo0AHvG_vb2KBV7unCCptA.pngg 600w,
+                  ../content/images/size/w1000/2020/05/1_Bo0AHvG_vb2KBV7unCCptA.pngng 1000w,
+                 ../content/images/size/w2000/2020/05/1_Bo0AHvG_vb2KBV7unCCptA.pngpng 2000w"
+            sizes="(max-width: 400px) 300px,(max-width: 730px) 600px, (max-width: 1600px) 100vw"
+            src="../content/images/size/w2000/2020/05/1_Bo0AHvG_vb2KBV7unCCptA.png"
+            alt="Building my personal blog ✍️"
+        />
+    </figure>
+
+            
+<div class="post-body u-relative">
+    <aside class="post-share sticky-parent u-absolute0 u-textAlignCenter u-hide-before-lg u-fontSizeBase">
+    <div class="sticky-top-wrap">
+        <div class="post-share-inner sticky">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/building-my-personal-blog/"
+                aria-label="Share on Facebook"
+                class="button button--circle js-share bg-facebook">
+                <svg class="icon"><use xlink:href="#icon-facebook"></use></svg>
+            </a>
+            <a href="https://twitter.com/share?text=Building%20my%20personal%20blog%20%E2%9C%8D%EF%B8%8F&amp;url=http://localhost:2368/building-my-personal-blog/"
+                aria-label="Share on Twitter"
+                class="button button--circle js-share bg-twitter">
+                <svg class="icon"><use xlink:href="#icon-twitter"></use></svg>
+            </a>
+            <a href="https://www.reddit.com/submit?url=http://localhost:2368/building-my-personal-blog/&amp;title=Building%20my%20personal%20blog%20%E2%9C%8D%EF%B8%8F"
+                aria-label="Share on Reddit"
+                class="button button--circle js-share bg-reddit">
+                <svg class="icon"><use xlink:href="#icon-reddit"></use></svg>
+            </a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:2368/building-my-personal-blog/&amp;title=Building%20my%20personal%20blog%20%E2%9C%8D%EF%B8%8F"
+                aria-label="Share on Linkedin"
+                class="button button--circle js-share bg-linkedin">
+                <svg class="icon"><use xlink:href="#icon-linkedin"></use></svg>
+            </a>
+            <a href="https://pinterest.com/pin/create/button/?url=http://localhost:2368/building-my-personal-blog/"
+                aria-label="Share on Pinterest"
+                class="button button--circle js-share bg-pinterest">
+                <svg class="icon"><use xlink:href="#icon-pinterest"></use></svg>
+            </a>
+            <div class="js-toggle-comments u-pointer i-chat button button--circle u-hide post-comments-show" style="margin-top:8px">
+                <svg class="icon"><use xlink:href="#icon-chat"></use></svg>
             </div>
         </div>
     </div>
-    <div class="site-nav-right">
-        <div class="site-nav-toggle-menu js-toggle-menu">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon icon--menu"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"></path></svg>
-        </div>
-            <a class="signin-link button small line" href="http://localhost:2368/signin/">Log in</a>
-            <a class="button primary small header-cta" href="http://localhost:2368/signup/">Subscribe</a>
-    </div>
-</nav>
-    </div>
-</div></header>
+</aside>
 
-
-<main id="site-main" class="site-main outer">
-    <div class="inner">
-
-        <article class="post-full post tag-research featured ">
-
-            <header class="post-full-header">
-
-                <section class="post-full-tags">
-                    <a href="../tag/research/index.html">Research</a>
-                </section>
-
-                <h1 class="post-full-title">Building my personal blog ✍️</h1>
-
-                <p class="post-full-custom-excerpt">This is an article about the obstacles I faced and the knowledge I gained in figuring out an elegant set of steps to develop my very own free self-hosted personal blog.  I hope you enjoy it and use this as a starting point to build your very own blog.</p>
-
-                <div class="post-full-byline">
-
-                    <section class="post-full-byline-content">
-
-                        <ul class="author-list">
-                            <li class="author-list-item">
-
-                                <div class="author-card">
-                                    <img class="author-profile-image" src="../content/images/size/w100/2020/05/Pic--2-.jpg" alt="Kithmin Randula Bandara Wickramasinghe" />
-                                    <div class="author-info">
-                                        <h2>Kithmin Randula Bandara Wickramasinghe</h2>
-                                        <p>Read <a href="../author/kithmin/index.html">more posts</a> by this author.</p>
-                                    </div>
-                                </div>
-
-                                <a href="../author/kithmin/index.html" class="author-avatar">
-                                    <img class="author-profile-image" src="../content/images/size/w100/2020/05/Pic--2-.jpg" alt="Kithmin Randula Bandara Wickramasinghe" />
-                                </a>
-
-                            </li>
-                        </ul>
-
-                        <section class="post-full-byline-meta">
-                            <h4 class="author-name"><a href="../author/kithmin/index.html">Kithmin Randula Bandara Wickramasinghe</a></h4>
-                            <div class="byline-meta-content">
-                                <time class="byline-meta-date" datetime="2020-06-02">2 Jun 2020</time>
-                                <span class="byline-reading-time"><span class="bull">&bull;</span> 9 min read</span>
-                            </div>
-                        </section>
-
-                    </section>
-
-
-                </div>
-            </header>
-
-
-                <figure class="post-full-image">
-                    <img
-                        srcset="../content/images/size/w300/2020/05/1_Bo0AHvG_vb2KBV7unCCptA.png 300w,
-                               ../content/images/size/w600/2020/05/1_Bo0AHvG_vb2KBV7unCCptA.pngg 600w,
-                              ../content/images/size/w1200/2020/05/1_Bo0AHvG_vb2KBV7unCCptA.pngng 1000w,
-                             ../content/images/size/w2000/2020/05/1_Bo0AHvG_vb2KBV7unCCptA.pngpng 2000w"
-                        sizes="(max-width: 800px) 400px,
-                            (max-width: 1170px) 1170px,
-                                2000px"
-                        src="../content/images/size/w2000/2020/05/1_Bo0AHvG_vb2KBV7unCCptA.png"
-                        alt="Building my personal blog ✍️"
-                    />
-                </figure>
-                <section class="post-full-content">
-                    <div class="post-content">
-                        <h2 id="how-things-got-to-where-they-are-now-"><strong>How things got to where they are now...</strong></h2><p>I have been interested in creating a personal blog since I was in my second year at University, back in 2017. I gave it a try by making it on <a href="https://wordpress.com/">wordpress </a>once, but it didn't feel personal enough. I realized that I didn't just want to have my own blog, I wanted to create it myself personally, like I engineered it with a bit of my lazy computer programming skills. So until then, I collected all the documents and images of my projects and endeavors and waited for the opportunity to do this.</p><p>I was able to get the exact opportunity to re-attempt this in 2020 when I saw the <a href="https://blog.ramith.fyi/static/">blog</a> of a young undergraduate from the 17 batch; Ramith Hettiarachchi, who also happens to be from the SEF ScholarX Class of 2019. </p><p>Ramith had a very attractive blog, which looked very personal and well developed. I would like to extend my personal thanks to Ramith for his advice and support (and especially on how he got me out of the Netlify trouble which could have ended up in this particular article being entirely different to what it is now), in helping me write about my experience on "HOW I MADE MY  SELF-HOSTED PERSONAL BLOG USING GHOST AND GITHUB PAGES".</p><blockquote>PLEASE NOTE: I did everything on my Laptop which was running Windows 10. I didn't dual boot my laptop to get Linux thanks to the amazing work they have done with Windows Subsystem for Linux  (WSL). Also, I did everything for FREE, which is how I like to work on projects. &gt;Great results for Low Budget! 😉 </blockquote><h2 id="what-i-wanted-to-build">What I wanted to build?</h2><p>I was very excited about the year 2020, even though (so far) it was one of the most terrible years in Human History. This was solely due to the fact that 2020 opened up new avenues for me (and Netflix said a Narnia remake is coming soon 😍), in various fields such as Artificial Intelligence, Blogging and Product Development Research to name a few. I wanted to pick up some new skills I could use in my future career as well.</p><p>Ramith had used this API called <a href="https://ghost.org/">Ghost</a>, which was a powerful and unique system for publication content creation and management. Together with Gatsby, it was the entire FRONT-END FRAMEWORK I needed to make my custom personal blog.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2020/05/11-1.jpg" class="kg-image"><figcaption>How Ghost integrates with Gatsby.</figcaption></figure><p>The entire blog had to be hosted on GitHub, and then I could build and deploy my new project with Netlify, and it will be hosted on the internet like any other Blog.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2020/05/12-1.jpg" class="kg-image"><figcaption>How Ghost+Gatsby can be used to host on Netlify for the End User</figcaption></figure><blockquote>NOTE: This was how I envisioned everything to be developed at first. However the Netlify integration did not work out the way it was supposed to, and me and Ramith spent some time looking for other alternative methods. So this post is actually taking one such alternative approach and avoiding a whole lot of mess and time-waste. You're welcome 😄</blockquote><p>Anyways, when I started to create this new blog, I found out that these websites here are very influential for my work. (Ignore the sections on setting up Netlify)</p><ol><li><a href="https://www.conordewey.com/blog/building-my-blog-with-gatsby-and-ghost/">https://www.conordewey.com/blog/building-my-blog-with-gatsby-and-ghost/</a></li><li><a href="https://josebrowne.com/tutorial-static-blog-using-headless-ghost-2-0-gatsby-netlify/">https://josebrowne.com/tutorial-static-blog-using-headless-ghost-2-0-gatsby-netlify/</a></li><li><a href="https://www.devopscycle.com/ghost-gatsby-netlify-jamstack/">https://www.devopscycle.com/ghost-gatsby-netlify-jamstack/</a></li><li><a href="https://zzamboni.github.io/test-ghost-blog/hosting-a-ghost-blog-in-github-the-easier-way/index.html">https://zzamboni.github.io/test-ghost-blog/hosting-a-ghost-blog-in-github-the-easier-way/index.html</a></li><li><a href="https://github.com/Fried-Chicken/ghost-static-site-generator">https://github.com/Fried-Chicken/ghost-static-site-generator</a></li></ol><blockquote>PLEASE NOTE: They used to do this kind of static blog creation using a package called buster, but now it is outdated and not available for Ubuntu 20.04 LTS. Our approach will go with a different static site generator tool instead of Buster! Much simpler!</blockquote><h2 id="install-ubuntu-20-04-on-windows-10-using-wsl"><strong>Install Ubuntu 20.04 on Windows 10 using WSL</strong></h2><p>Th<a href="../the-editor/index.html">i</a>s was the big jewel that made this all possible. Thanks to the Windows Subsystem for Linux (WSL), I was able to get this project up and running like a charm. </p><p>This website <a href="https://itsfoss.com/install-bash-on-windows/">https://itsfoss.com/install-bash-on-windows/</a> had the steps on how to install WSL on my computer. It was so simple!</p><blockquote>PLEASE NOTE: Make sure to RESTART the computer when you install Ubuntu 20.04 LTS on Windows 10.</blockquote><p>Now if you have Ubuntu running,  add your user name and your password and get into your Linux terminal. </p><pre><code class="language-javascript">sudo apt-get update &amp;&amp; sudo apt-get upgrade</code></pre><p>OPTIONAL: <a href="https://docs.microsoft.com/en-us/windows/wsl/wsl2-install">https://docs.microsoft.com/en-us/windows/wsl/wsl2-install</a></p><p>There is a <a href="https://github.com/microsoft/WSL/issues/5125">small issue</a> in WSL that you need to correct using the following code snippet.  </p><pre><code class="language-javascript">sudo add-apt-repository ppa:rafaeldtinoco/lp1871129
+    <div class="post-body-wrap">
+        <div class="post-inner js-post-content"><h2 id="how-things-got-to-where-they-are-now-"><strong>How things got to where they are now...</strong></h2><p>I have been interested in creating a personal blog since I was in my second year at University, back in 2017. I gave it a try by making it on <a href="https://wordpress.com/">wordpress </a>once, but it didn't feel personal enough. I realized that I didn't just want to have my own blog, I wanted to create it myself personally, like I engineered it with a bit of my lazy computer programming skills. So until then, I collected all the documents and images of my projects and endeavors and waited for the opportunity to do this.</p><p>I was able to get the exact opportunity to re-attempt this in 2020 when I saw the <a href="https://blog.ramith.fyi/static/">blog</a> of a young undergraduate from the 17 batch; Ramith Hettiarachchi, who also happens to be from the SEF ScholarX Class of 2019. </p><p>Ramith had a very attractive blog, which looked very personal and well developed. I would like to extend my personal thanks to Ramith for his advice and support (and especially on how he got me out of the Netlify trouble which could have ended up in this particular article being entirely different to what it is now), in helping me write about my experience on "HOW I MADE MY  SELF-HOSTED PERSONAL BLOG USING GHOST AND GITHUB PAGES".</p><blockquote>PLEASE NOTE: I did everything on my Laptop which was running Windows 10. I didn't dual boot my laptop to get Linux thanks to the amazing work they have done with Windows Subsystem for Linux  (WSL). Also, I did everything for FREE, which is how I like to work on projects. &gt;Great results for Low Budget! 😉 </blockquote><h2 id="what-i-wanted-to-build">What I wanted to build?</h2><p>I was very excited about the year 2020, even though (so far) it was one of the most terrible years in Human History. This was solely due to the fact that 2020 opened up new avenues for me (and Netflix said a Narnia remake is coming soon 😍), in various fields such as Artificial Intelligence, Blogging and Product Development Research to name a few. I wanted to pick up some new skills I could use in my future career as well.</p><p>Ramith had used this API called <a href="https://ghost.org/">Ghost</a>, which was a powerful and unique system for publication content creation and management. Together with Gatsby, it was the entire FRONT-END FRAMEWORK I needed to make my custom personal blog.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2020/05/11-1.jpg" class="kg-image"><figcaption>How Ghost integrates with Gatsby.</figcaption></figure><p>The entire blog had to be hosted on GitHub, and then I could build and deploy my new project with Netlify, and it will be hosted on the internet like any other Blog.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2020/05/12-1.jpg" class="kg-image"><figcaption>How Ghost+Gatsby can be used to host on Netlify for the End User</figcaption></figure><blockquote>NOTE: This was how I envisioned everything to be developed at first. However the Netlify integration did not work out the way it was supposed to, and me and Ramith spent some time looking for other alternative methods. So this post is actually taking one such alternative approach and avoiding a whole lot of mess and time-waste. You're welcome 😄</blockquote><p>Anyways, when I started to create this new blog, I found out that these websites here are very influential for my work. (Ignore the sections on setting up Netlify)</p><ol><li><a href="https://www.conordewey.com/blog/building-my-blog-with-gatsby-and-ghost/">https://www.conordewey.com/blog/building-my-blog-with-gatsby-and-ghost/</a></li><li><a href="https://josebrowne.com/tutorial-static-blog-using-headless-ghost-2-0-gatsby-netlify/">https://josebrowne.com/tutorial-static-blog-using-headless-ghost-2-0-gatsby-netlify/</a></li><li><a href="https://www.devopscycle.com/ghost-gatsby-netlify-jamstack/">https://www.devopscycle.com/ghost-gatsby-netlify-jamstack/</a></li><li><a href="https://zzamboni.github.io/test-ghost-blog/hosting-a-ghost-blog-in-github-the-easier-way/index.html">https://zzamboni.github.io/test-ghost-blog/hosting-a-ghost-blog-in-github-the-easier-way/index.html</a></li><li><a href="https://github.com/Fried-Chicken/ghost-static-site-generator">https://github.com/Fried-Chicken/ghost-static-site-generator</a></li></ol><blockquote>PLEASE NOTE: They used to do this kind of static blog creation using a package called buster, but now it is outdated and not available for Ubuntu 20.04 LTS. Our approach will go with a different static site generator tool instead of Buster! Much simpler!</blockquote><h2 id="install-ubuntu-20-04-on-windows-10-using-wsl"><strong>Install Ubuntu 20.04 on Windows 10 using WSL</strong></h2><p>Th<a href="../the-editor/index.html">i</a>s was the big jewel that made this all possible. Thanks to the Windows Subsystem for Linux (WSL), I was able to get this project up and running like a charm. </p><p>This website <a href="https://itsfoss.com/install-bash-on-windows/">https://itsfoss.com/install-bash-on-windows/</a> had the steps on how to install WSL on my computer. It was so simple!</p><blockquote>PLEASE NOTE: Make sure to RESTART the computer when you install Ubuntu 20.04 LTS on Windows 10.</blockquote><p>Now if you have Ubuntu running,  add your user name and your password and get into your Linux terminal. </p><pre><code class="language-javascript">sudo apt-get update &amp;&amp; sudo apt-get upgrade</code></pre><p>OPTIONAL: <a href="https://docs.microsoft.com/en-us/windows/wsl/wsl2-install">https://docs.microsoft.com/en-us/windows/wsl/wsl2-install</a></p><p>There is a <a href="https://github.com/microsoft/WSL/issues/5125">small issue</a> in WSL that you need to correct using the following code snippet.  </p><pre><code class="language-javascript">sudo add-apt-repository ppa:rafaeldtinoco/lp1871129
 sudo apt update
 sudo apt install libc6=2.31-0ubuntu8+lp1871129~1 libc6-dev=2.31-0ubuntu8+lp1871129~1 libc-dev-bin=2.31-0ubuntu8+lp1871129~1 -y --allow-downgrades
 sudo apt-mark hold libc6</code></pre><h2 id="install-yarn"><strong>Install yarn</strong></h2><p>This is what I installed first. Simply followed the instructions given <a href="https://classic.yarnpkg.com/en/docs/install/#debian-stable">here</a>. </p><pre><code class="language-javascript">curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -260,439 +316,330 @@ ghost start</code></pre><figure class="kg-card kg-image-card kg-card-hascaption"
 wget -r -nH -P docs -E -T 2 -np -k http://localhost:2368/</code></pre><p>The <code>wget</code> command will crawl the blog that is published at <a href="../index.html"><code>http://localhost:2368/</code></a> and create a static copy of that inside the <code>docs</code> directory. You can open the file <code>docs/index.html</code> in your web browser to verify. <em>NOTE - So for this to work, you must make sure your ghost CMS is started and your blog is locally published.</em></p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2020/06/image-13.png" class="kg-image"><figcaption>Crawling the locally published blog website and generating a static copy inside docs</figcaption></figure><h2 id="simply-push-to-github-and-set-it-up">Simply Push to GitHub and set it up</h2><p>Now we have come to the last step. Hope you are excited to see the results of your're effort! 😄 Follow the commands given below, and then go to your GitHub project repository.</p><blockquote>NOTE: Use the following code snippet given below every time you make any updates and want to push to the GitHub repo to publish those changes.</blockquote><pre><code class="language-javascript">wget -r -nH -P docs -E -T 2 -np -k http://localhost:2368/
 git add -A
 git commit -am 'Update to static website'
-git push</code></pre><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2020/06/image-14.png" class="kg-image"><figcaption>Your repository will look like following were you will notice the docs folder is published</figcaption></figure><p>Now all we need to do, is to enable GitHub Pages on our repository, so that the contents under <code>docs</code> gets published. For that, go to the "Settings" tab in your repository, and scroll down until you find the GitHub Pages section and choose the <code>master branch /docs folder</code> option and click the "Save" button:</p><figure class="kg-card kg-image-card"><img src="../content/images/2020/06/image-15.png" class="kg-image"></figure><p>We are done! After a few minutes (usually takes 2-5 minutes for the contents to be published the first time, afterwards updates are nearly instantaneous), you will can visit <code>http://&lt;github-username&gt;.github.io/&lt;github-repo-name&gt;</code>, and you will find your blog website published there.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2020/06/image-16.png" class="kg-image"><figcaption>Et Viola!</figcaption></figure><p>So that's it. If i come across more cool updates I can add to my blog, I will be sure to update about those. Please feel free to leave feedback about this post and things I could improve and learn about.</p><p>I hope you find this useful and inspiring to build your very own blog. </p><p>Cheers.</p><p>Kithmin Wickramasinghe.</p>
-                    </div>
-                </section>
+git push</code></pre><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2020/06/image-14.png" class="kg-image"><figcaption>Your repository will look like following were you will notice the docs folder is published</figcaption></figure><p>Now all we need to do, is to enable GitHub Pages on our repository, so that the contents under <code>docs</code> gets published. For that, go to the "Settings" tab in your repository, and scroll down until you find the GitHub Pages section and choose the <code>master branch /docs folder</code> option and click the "Save" button:</p><figure class="kg-card kg-image-card"><img src="../content/images/2020/06/image-15.png" class="kg-image"></figure><p>We are done! After a few minutes (usually takes 2-5 minutes for the contents to be published the first time, afterwards updates are nearly instantaneous), you will can visit <code>http://&lt;github-username&gt;.github.io/&lt;github-repo-name&gt;</code>, and you will find your blog website published there.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2020/06/image-16.png" class="kg-image"><figcaption>Et Viola!</figcaption></figure><p>So that's it. If i come across more cool updates I can add to my blog, I will be sure to update about those. Please feel free to leave feedback about this post and things I could improve and learn about.</p><p>I hope you find this useful and inspiring to build your very own blog. </p><p>Cheers.</p><p>Kithmin Wickramasinghe.</p></div>
 
+        <div class="post-tags u-marginTop30 buttonSet">
+            <a href="../tag/research/index.html" title="Research" class="button button--tag button--line u-textCapitalize">Research</a>
+        </div>
+
+        <hr>
+<div class="row u-marginTop30 prev-next">
+    <div class="col s12 m6">
+        <a href="../scholarx-chapter-01/index.html" class="prev-next-link u-block u-marginBottom20">
+            <div class="prev-next-span text-muted u-block"><span class="u-inlineBlock u-hide-before-md arrow-left"><svg class="icon icon--m top2 rotate270"><use xlink:href="#icon-arrow-round"></use></svg></span> Prev article</div>
+            <h5 class="prev-next-title u-fontWeightMedium">My First Chapter of ScholarX &#x27;20</h5>
+        </a>
+    </div>
+
+    <div class="col s12 m6">
+        <a href="../lessons-from-eran-withana/index.html" class="prev-next-link u-block u-marginBottom20 prev-next-right">
+            <div class="prev-next-span text-muted">Next article <span class="u-inlineBlock u-hide-before-md arrow-right"><svg class="icon icon--m top2 rotate90"><use xlink:href="#icon-arrow-round"></use></svg></span></div>
+            <h5 class="prev-next-title u-fontWeightMedium">Lessons from Eran Withana: Getting into Grad School and Beyond</h5>
+        </a>
+    </div>
+</div>
+        <div class="post-share-mob u-hide-after-lg u-flex u-flexCenter justify-content-center u-fixed u-absolute0">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/building-my-personal-blog/"
+        class="bg-facebook button u-textColorWhite"
+        onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+        <svg class="icon icon--s"><use xlink:href="#icon-facebook"></use></svg> Share
+    </a>
+
+    <a href="https://twitter.com/share?text=Building%20my%20personal%20blog%20%E2%9C%8D%EF%B8%8F&amp;url=http://localhost:2368/building-my-personal-blog/"
+        class="bg-twitter button u-textColorWhite"
+        onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+        <svg class="icon icon--s"><use xlink:href="#icon-twitter"></use></svg> Tweet
+    </a>
+
+    <a href="whatsapp://send?text=http://localhost:2368/building-my-personal-blog/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-whatsapp button u-textColorWhite">
+        <svg class="icon icon--s"><use xlink:href="#icon-whatsapp"></use></svg> Send
+    </a>
+</div>
+        <hr class="post-footer-hr">
+
+        <div class="button button--large button--dark button--comment post-comments-show js-toggle-comments u-hide">
+            <span class="disqus-comment-count" data-disqus-url="http://localhost:2368/building-my-personal-blog/">0 Comments</span>
+        </div>
+    </div>
+</div>
+
+<div id="post-comments" class="post-comments u-sizeFullWidth post-comments-show u-absolute0 u-fixed u-hide">
+    <div class="post-comments-header u-paddingLeft15 u-flexCenter">
+        <div class="js-toggle-comments button button--dark button--circle"><svg class="icon"><use xlink:href="#icon-close"></use></svg></div>
+    </div>
+
+    <div class="post-comments-wrap u-padding15">
+        <div class="js-disqus-loanding u-textAlignCenter u-marginTop30">Loading...</div>
+        <div id="disqus_thread" class="js-disqus u-hide"></div>
+    </div>
+</div>
+
+<div class="post-comments-overlay u-absolute0 u-fixed js-toggle-comments"></div>
 
 
         </article>
 
-    </div>
-</main>
+        <aside class="sidebar col sticky-parent col-right sidebar-sticky u-hide-before-lg">
+    <div class="sticky-bottom-wrap">
+        <div class="sticky">
+                    <div class="sidebar-items u-marginBottom30 u-flexColumn">
+    <h3 class="sidebar-title u-textColorDarker title-line">Latest Articles</h3>
 
-<aside class="read-next outer">
-    <div class="inner">
-        <div class="read-next-feed">
-                <article class="read-next-card">
-                    <header class="read-next-card-header">
-                        <h3><span>More in</span> <a href="../tag/research/index.html">Research</a></h3>
-                    </header>
-                    <div class="read-next-card-content">
-                        <ul>
-                            <li>
-                                <h4><a href="../final-year-thesis/index.html">Undergraduate Final Year Thesis</a></h4>
-                                <div class="read-next-card-meta">
-                                    <p><time datetime="2020-03-01">1 Mar 2020</time>
-                                        <span class="bull">&bull;</span>
-                                        1 min read
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <footer class="read-next-card-footer">
-                        <a href="../tag/research/index.html" class="button line small">1 post
-                            →</a>
-                    </footer>
-                </article>
-
-                <article class="post-card post tag-higherstudies ">
-
-    <a class="post-card-image-link" href="../lessons-from-eran-withana/index.html">
-        <img class="post-card-image"
-            srcset="../content/images/size/w300/2020/06/95952468_2611488425777654_312730458745995264_o.jpg 300w,
-                   ../content/images/size/w600/2020/06/95952468_2611488425777654_312730458745995264_o.jpgg 600w,
-                  ../content/images/size/w1200/2020/06/95952468_2611488425777654_312730458745995264_o.jpgpg 1000w,
-                 ../content/images/size/w2000/2020/06/95952468_2611488425777654_312730458745995264_o.jpgjpg 2000w"
-            sizes="(max-width: 1000px) 400px, 700px"
-            src="../content/images/size/w600/2020/06/95952468_2611488425777654_312730458745995264_o.jpg"
-            alt="Lessons from Eran Withana: Getting into Grad School and Beyond"
-        />
-    </a>
-
-    <div class="post-card-content">
-
-        <a class="post-card-content-link" href="../lessons-from-eran-withana/index.html">
-
-            <header class="post-card-header">
-                <div class="post-card-header-tags">
-                    <span class="post-visibility post-visibility-public">Free Post</span>
-
-                            <div class="post-card-primary-tag">Higher Studies</div>
-
-                </div>
-                <h2 class="post-card-title">Lessons from Eran Withana: Getting into Grad School and Beyond</h2>
-            </header>
-
-            <section class="post-card-excerpt">
-                    <p>This is an article about the key points and lessons learned from the webinar by Eran Withana, a Senior Manager at LinkedIn. Hope you will also learn something valuable from this one!</p>
-            </section>
-
+    <div class="sidebar-post u-relative">
+        <a href="../lessons-from-eran-withana/index.html" class="u-flex">
+            <span class="u-flex0 sidebar-post-border u-flexCenter u-fontSize36 u-fontWeightSemibold">1</span>
+            <h3 class="u-flex1 u-fontSize15 u-fontWeightMedium u-lineHeightTight u-flexCenter">Lessons from Eran Withana: Getting into Grad School and Beyond</h3>
         </a>
-
-        <footer class="post-card-meta">
-            <ul class="author-list">
-                <li class="author-list-item">
-
-                    <div class="author-name-tooltip">
-                        Kithmin Randula Bandara Wickramasinghe
-                    </div>
-
-                    <a href="../author/kithmin/index.html" class="static-avatar">
-                        <img class="author-profile-image" src="../content/images/size/w100/2020/05/Pic--2-.jpg" alt="Kithmin Randula Bandara Wickramasinghe" />
-                    </a>
-                </li>
-            </ul>
-            <div class="post-card-byline-content">
-                <span><a href="../author/kithmin/index.html">Kithmin Randula Bandara Wickramasinghe</a></span>
-                <span class="post-card-byline-date"><time datetime="2020-06-03">3 Jun 2020</time> <span class="bull">&bull;</span> 1 min read</span>
-            </div>
-        </footer>
-
     </div>
-
-</article>
-
-                <article class="post-card post tag-higherstudies ">
-
-    <a class="post-card-image-link" href="../scholarx-chapter-01/index.html">
-        <img class="post-card-image"
-            srcset="../content/images/size/w300/2020/06/mobile-view-2-2.jpg 300w,
-                   ../content/images/size/w600/2020/06/mobile-view-2-2.jpgg 600w,
-                  ../content/images/size/w1200/2020/06/mobile-view-2-2.jpgpg 1000w,
-                 ../content/images/size/w2000/2020/06/mobile-view-2-2.jpgjpg 2000w"
-            sizes="(max-width: 1000px) 400px, 700px"
-            src="../content/images/size/w600/2020/06/mobile-view-2-2.jpg"
-            alt="My First Chapter of ScholarX &#x27;20"
-        />
-    </a>
-
-    <div class="post-card-content">
-
-        <a class="post-card-content-link" href="../scholarx-chapter-01/index.html">
-
-            <header class="post-card-header">
-                <div class="post-card-header-tags">
-                    <span class="post-visibility post-visibility-public">Free Post</span>
-
-                            <div class="post-card-primary-tag">Higher Studies</div>
-
-                </div>
-                <h2 class="post-card-title">My First Chapter of ScholarX &#x27;20</h2>
-            </header>
-
-            <section class="post-card-excerpt">
-                    <p>This article is a self write-up about my experience from the first month of being in the Class of 2020 of SEF ScholarX. It contains  resources I have collected and also a record of my timeline, which I hope will be useful to you for your higher studies applications. Enjoy!</p>
-            </section>
-
+    <div class="sidebar-post u-relative">
+        <a href="../scholarx-chapter-01/index.html" class="u-flex">
+            <span class="u-flex0 sidebar-post-border u-flexCenter u-fontSize36 u-fontWeightSemibold">2</span>
+            <h3 class="u-flex1 u-fontSize15 u-fontWeightMedium u-lineHeightTight u-flexCenter">My First Chapter of ScholarX &#x27;20</h3>
         </a>
-
-        <footer class="post-card-meta">
-            <ul class="author-list">
-                <li class="author-list-item">
-
-                    <div class="author-name-tooltip">
-                        Kithmin Randula Bandara Wickramasinghe
-                    </div>
-
-                    <a href="../author/kithmin/index.html" class="static-avatar">
-                        <img class="author-profile-image" src="../content/images/size/w100/2020/05/Pic--2-.jpg" alt="Kithmin Randula Bandara Wickramasinghe" />
-                    </a>
-                </li>
-            </ul>
-            <div class="post-card-byline-content">
-                <span><a href="../author/kithmin/index.html">Kithmin Randula Bandara Wickramasinghe</a></span>
-                <span class="post-card-byline-date"><time datetime="2020-05-29">29 May 2020</time> <span class="bull">&bull;</span> 5 min read</span>
-            </div>
-        </footer>
-
+    </div>
+    <div class="sidebar-post u-relative">
+        <a href="../the-editor/index.html" class="u-flex">
+            <span class="u-flex0 sidebar-post-border u-flexCenter u-fontSize36 u-fontWeightSemibold">3</span>
+            <h3 class="u-flex1 u-fontSize15 u-fontWeightMedium u-lineHeightTight u-flexCenter">Writing posts with Ghost ✍️</h3>
+        </a>
+    </div>
+    <div class="sidebar-post u-relative">
+        <a href="../final-year-thesis/index.html" class="u-flex">
+            <span class="u-flex0 sidebar-post-border u-flexCenter u-fontSize36 u-fontWeightSemibold">4</span>
+            <h3 class="u-flex1 u-fontSize15 u-fontWeightMedium u-lineHeightTight u-flexCenter">Undergraduate Final Year Thesis</h3>
+        </a>
+    </div>
+    <div class="sidebar-post u-relative">
+        <a href="../deep-neural-networks/index.html" class="u-flex">
+            <span class="u-flex0 sidebar-post-border u-flexCenter u-fontSize36 u-fontWeightSemibold">5</span>
+            <h3 class="u-flex1 u-fontSize15 u-fontWeightMedium u-lineHeightTight u-flexCenter">DEEP NEURAL NETWORKS:
+A LAYMAN’S INTRODUCTION</h3>
+        </a>
     </div>
 
-</article>
+</div>
+
+            
+            <div class="sidebar-items u-marginBottom30 mp-category-item">
+    <ul class="mp-category-list">
+            <li class="u-relative">
+                <a href="../tag/higherstudies/index.html" title="Higher Studies" class="mp-category-link u-relative u-flexCenter u-fontWeightMedium">
+                    <span class="u-bgGradient u-absolute0" style="z-index: -1"></span>
+
+                    <span class="u-fontSizeBase u-textColorWhite u-flex0">Higher Studies</span>
+                    <span class="bar u-flex1"></span>
+                    <span class="mp-category-count u-round u-flex0 u-flexCenter justify-content-center">2</span>
+                </a>
+            </li>
+            <li class="u-relative">
+                <a href="../tag/research/index.html" title="Research" class="mp-category-link u-relative u-flexCenter u-fontWeightMedium">
+                    <span class="u-bgGradient u-absolute0" style="z-index: -1"></span>
+
+                    <span class="u-fontSizeBase u-textColorWhite u-flex0">Research</span>
+                    <span class="bar u-flex1"></span>
+                    <span class="mp-category-count u-round u-flex0 u-flexCenter justify-content-center">2</span>
+                </a>
+            </li>
+            <li class="u-relative">
+                <a href="../tag/ai/index.html" title="AI" class="mp-category-link u-relative u-flexCenter u-fontWeightMedium">
+                    <span class="u-bgGradient u-absolute0" style="z-index: -1"></span>
+
+                    <span class="u-fontSizeBase u-textColorWhite u-flex0">AI</span>
+                    <span class="bar u-flex1"></span>
+                    <span class="mp-category-count u-round u-flex0 u-flexCenter justify-content-center">1</span>
+                </a>
+            </li>
+            <li class="u-relative">
+                <a href="../tag/biomed/index.html" title="Biomed" class="mp-category-link u-relative u-flexCenter u-fontWeightMedium">
+                    <span class="u-bgGradient u-absolute0" style="z-index: -1"></span>
+
+                    <span class="u-fontSizeBase u-textColorWhite u-flex0">Biomed</span>
+                    <span class="bar u-flex1"></span>
+                    <span class="mp-category-count u-round u-flex0 u-flexCenter justify-content-center">1</span>
+                </a>
+            </li>
+            <li class="u-relative">
+                <a href="../tag/robotics/index.html" title="Robotics" class="mp-category-link u-relative u-flexCenter u-fontWeightMedium">
+                    <span class="u-bgGradient u-absolute0" style="z-index: -1"></span>
+
+                    <span class="u-fontSizeBase u-textColorWhite u-flex0">Robotics</span>
+                    <span class="bar u-flex1"></span>
+                    <span class="mp-category-count u-round u-flex0 u-flexCenter justify-content-center">1</span>
+                </a>
+            </li>
+    </ul>
+</div>
+
+            <div class="widget-twitter js-twitter-feed sidebar-items u-hide"></div>
         </div>
     </div>
 </aside>
-
-
-
-
-
-        <footer class="site-footer outer">
-            <div class="site-footer-content inner">
-                <section class="copyright">
-                    &copy; 2020 <a href="../index.html">The Rational Optimist</a>
-                    <span class="bull">&bull;</span> Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
-                </section>
-                <nav class="site-footer-nav">
-                    <a href="https://twitter.com/tryghost" target="_blank" rel="noopener"><svg class="icon"><use xlink:href="#icon-twitter"></use></svg> Twitter</a>
-                    <a href="https://www.facebook.com/ghost" target="_blank" rel="noopener"><svg class="icon"><use xlink:href="#icon-facebook"></use></svg> Facebook</a>
-                </nav>
-            </div>
-        </footer>
-
     </div>
-
-   <div class="notification notification-subscribe">
-    <a class="notification-close" href="javascript:;"></a>
-    You've successfully subscribed to The Rational Optimist
 </div>
 
-<div class="notification notification-signup">
-    <a class="notification-close" href="javascript:;"></a>
-    Great! Next, complete checkout for full access to The Rational Optimist
-</div>
 
-<div class="notification notification-signin">
-    <a class="notification-close" href="javascript:;"></a>
-    Welcome back! You've successfully signed in.
-</div>
+<section class="post-related u-overflowHidden">
+    <div class="extreme-container">
+        <div class="row">
+            <div class="col s12">
+                <h2 class="post-related-title u-fontSizeBase title-line u-marginBottom40">Related Articles</h2>
+            </div>
 
-<div class="notification notification-checkout">
-    <a class="notification-close" href="javascript:;"></a>
-    Success! Your account is fully activated, you now have access to all content.
-</div>
+            <div class="col col-s12 s6 l4">
+                <article class="post-box u-relative u-overflowHidden u-marginBottom40">
+    <figure class="post-box-image u-relative u-marginBottom15 u-block u-bgGray u-overflowHidden">
+            <a href="../final-year-thesis/index.html" class="post-box-image-link image-hover">
+                <img class="u-absolute0 u-image u-block blur-up lazyload"
+                    src="../content/images/size/w600/2020/06/IMG_4319-1.jpg"
+                    srcset="../content/images/size/w30/2020/06/IMG_4319-1.jpg"
+                    data-srcset="/content/images/size/w300/2020/06/IMG_4319-1.jpg 300w,
+                            /content/images/size/w600/2020/06/IMG_4319-1.jpg 600w,
+                            /content/images/size/w1000/2020/06/IMG_4319-1.jpg 1000w"
+                    data-sizes="(max-width: 800px) 400px, (max-width: 1170px) 700px, 1400px"
+                    alt="Undergraduate Final Year Thesis"
+                />
+            </a>
+    </figure>
 
-<div class="notification notification-billing-update">
-    <a class="notification-close" href="javascript:;"></a>
-    Success! Your billing info is updated.
-</div>
-
-<div class="notification notification-billing-update-cancel">
-    <a class="notification-close" href="javascript:;"></a>
-    Billing info update failed.
-</div>
-    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs>
-<symbol id="icon-coffe" viewBox="0 0 32 32">
-<title>coffe</title>
-<path d="M23.944 16.087c0.038-0.338 0.056-0.625 0.056-0.863 0-1.225-0.206-1.231-1-1.231h-4.719c0.456-0.75 0.719-1.525 0.719-2.313 0-2.369-3.581-3.525-3.581-5.5 0-0.731 0.319-1.331 0.581-2.181-1.656 0.437-2.963 2.094-2.963 3.85 0 3.019 3.519 3.044 3.519 5.3 0 0.281-0.087 0.531-0.131 0.844h-3.494c0.050-0.188 0.081-0.387 0.081-0.581 0-1.425-2.444-2.119-2.444-3.3 0-0.438 0.063-0.8 0.2-1.313-0.806 0.319-1.769 1.25-1.769 2.3 0 1.669 1.994 1.831 2.3 2.894h-6.3c-0.794 0-1 0.006-1 1.231s0.481 3.831 1.769 6.938c1.287 3.106 2.775 4.475 3.825 5.387l0.006-0.012c0.319 0.288 0.738 0.456 1.2 0.456h6.4c0.462 0 0.881-0.169 1.2-0.456l0.006 0.012c0.563-0.488 1.25-1.113 1.962-2.056 0.294 0.125 0.613 0.231 0.962 0.313 0.525 0.125 1.050 0.188 1.55 0.188 1.5 0 2.85-0.575 3.8-1.613 0.837-0.913 1.319-2.15 1.319-3.387 0-2.431-1.75-4.462-4.056-4.906zM22.881 24.012c-0.538 0-0.975-0.075-1.381-0.262 0.25-0.5 0.494-0.994 0.731-1.569 0.631-1.525 1.069-2.938 1.35-4.113 1.375 0.269 2.419 1.488 2.419 2.944 0 1.419-1.075 3-3.119 3z"></path>
-</symbol>
-<symbol id="icon-heart" viewBox="0 0 32 32">
-<title>heart</title>
-<path d="M22 3.5h-0.063c-2.481 0-4.675 1.313-5.938 3.25-1.262-1.938-3.456-3.25-5.938-3.25h-0.063c-3.869 0.038-7 3.181-7 7.063 0 2.313 1.013 5.594 2.987 8.294 3.763 5.144 10.012 9.644 10.012 9.644s6.25-4.5 10.012-9.644c1.975-2.7 2.988-5.981 2.988-8.294 0-3.881-3.131-7.025-7-7.063z"></path>
-</symbol>
-<symbol id="icon-twitter" viewBox="0 0 32 32">
-<title>twitter</title>
-<path d="M30.75 6.844c-1.087 0.481-2.25 0.806-3.475 0.956 1.25-0.75 2.212-1.938 2.663-3.35-1.169 0.694-2.462 1.2-3.844 1.469-1.106-1.181-2.681-1.919-4.419-1.919-3.344 0-6.050 2.712-6.050 6.056 0 0.475 0.050 0.938 0.156 1.381-5.031-0.25-9.494-2.662-12.475-6.331-0.519 0.894-0.819 1.938-0.819 3.044 0 2.1 1.075 3.956 2.7 5.044-1-0.025-1.938-0.3-2.75-0.756v0.075c0 2.938 2.088 5.381 4.856 5.937-0.506 0.137-1.044 0.212-1.594 0.212-0.388 0-0.769-0.038-1.138-0.113 0.769 2.406 3.006 4.156 5.656 4.206-2.069 1.625-4.681 2.594-7.519 2.594-0.487 0-0.969-0.031-1.444-0.087 2.669 1.738 5.85 2.738 9.262 2.738 11.144 0 17.231-9.231 17.231-17.238 0-0.262-0.006-0.525-0.019-0.781 1.181-0.856 2.206-1.919 3.019-3.138z"></path>
-</symbol>
-<symbol id="icon-facebook" viewBox="0 0 32 32">
-<title>facebook</title>
-<path d="M26.675 4h-21.35c-0.731 0-1.325 0.594-1.325 1.325v21.35c0 0.731 0.594 1.325 1.325 1.325h10.675v-9.5h-2.869v-3.5h2.869v-2.588c0-3.1 2.15-4.787 4.919-4.787 1.325 0 2.75 0.1 3.081 0.144v3.237h-2.206c-1.506 0-1.794 0.713-1.794 1.762v2.231h3.587l-0.469 3.5h-3.119v9.5h6.675c0.731 0 1.325-0.594 1.325-1.325v-21.35c0-0.731-0.594-1.325-1.325-1.325z"></path>
-</symbol>
-<symbol id="icon-github" viewBox="0 0 32 32">
-<title>github</title>
-<path d="M16 2c-7.731 0-14 6.431-14 14.356 0 6.344 4.013 11.719 9.575 13.619 0.088 0.019 0.162 0.025 0.238 0.025 0.519 0 0.719-0.381 0.719-0.712 0-0.344-0.012-1.244-0.019-2.444-0.525 0.119-0.994 0.169-1.412 0.169-2.694 0-3.306-2.094-3.306-2.094-0.638-1.656-1.556-2.1-1.556-2.1-1.219-0.856-0.006-0.881 0.088-0.881h0.006c1.406 0.125 2.144 1.488 2.144 1.488 0.7 1.225 1.637 1.569 2.475 1.569 0.656 0 1.25-0.212 1.6-0.375 0.125-0.925 0.488-1.556 0.887-1.919-3.106-0.363-6.375-1.594-6.375-7.094 0-1.569 0.544-2.85 1.438-3.85-0.144-0.363-0.625-1.825 0.137-3.8 0 0 0.1-0.031 0.313-0.031 0.506 0 1.65 0.194 3.537 1.506 1.119-0.319 2.313-0.475 3.506-0.481 1.188 0.006 2.387 0.162 3.506 0.481 1.887-1.313 3.031-1.506 3.538-1.506 0.212 0 0.313 0.031 0.313 0.031 0.762 1.975 0.281 3.438 0.137 3.8 0.894 1.006 1.438 2.287 1.438 3.85 0 5.513-3.275 6.725-6.394 7.081 0.5 0.444 0.95 1.319 0.95 2.656 0 1.919-0.019 3.469-0.019 3.938 0 0.337 0.194 0.719 0.712 0.719 0.075 0 0.163-0.006 0.25-0.025 5.569-1.9 9.575-7.281 9.575-13.619 0-7.925-6.269-14.356-14-14.356z"></path>
-</symbol>
-<symbol id="icon-instagram" viewBox="0 0 32 32">
-<title>instagram</title>
-<path d="M21 6c1.325 0 2.581 0.525 3.531 1.469s1.469 2.206 1.469 3.531v10c0 1.325-0.525 2.581-1.469 3.531s-2.206 1.469-3.531 1.469h-10c-1.325 0-2.581-0.525-3.531-1.469s-1.469-2.206-1.469-3.531v-10c0-1.325 0.525-2.581 1.469-3.531s2.206-1.469 3.531-1.469h10zM21 4h-10c-3.85 0-7 3.15-7 7v10c0 3.85 3.15 7 7 7h10c3.85 0 7-3.15 7-7v-10c0-3.85-3.15-7-7-7z"></path>
-<path d="M22.5 11c-0.831 0-1.5-0.669-1.5-1.5s0.669-1.5 1.5-1.5c0.825 0 1.5 0.669 1.5 1.5s-0.675 1.5-1.5 1.5zM16 12c2.206 0 4 1.794 4 4s-1.794 4-4 4-4-1.794-4-4 1.794-4 4-4zM16 10c-3.313 0-6 2.688-6 6s2.688 6 6 6 6-2.688 6-6-2.688-6-6-6z"></path>
-</symbol>
-<symbol id="icon-youtube" viewBox="0 0 32 32">
-<title>youtube</title>
-<path d="M31.788 9.3c0-2.813-2.069-5.075-4.625-5.075-3.462-0.162-6.994-0.225-10.6-0.225h-1.125c-3.6 0-7.137 0.063-10.6 0.225-2.55 0-4.619 2.275-4.619 5.087-0.156 2.225-0.225 4.45-0.219 6.675-0.006 2.225 0.063 4.45 0.212 6.681 0 2.813 2.069 5.094 4.619 5.094 3.637 0.169 7.369 0.244 11.162 0.238 3.8 0.012 7.519-0.063 11.162-0.238 2.556 0 4.625-2.281 4.625-5.094 0.15-2.231 0.219-4.456 0.212-6.688 0.013-2.225-0.056-4.45-0.206-6.681zM12.938 22.119v-12.281l9.063 6.137-9.063 6.144z"></path>
-</symbol>
-</defs>
-</svg>
-
-    <script>
-        var prismJs = '/assets/built/prismjs.js?v=90e7330248';
-        var prismJsComponents = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/';
-    </script>
-
-    <script>
-        var images = document.querySelectorAll('.kg-gallery-image img');
-        images.forEach(function (image) {
-            var container = image.closest('.kg-gallery-image');
-            var width = image.attributes.width.value;
-            var height = image.attributes.height.value;
-            var ratio = width / height;
-            container.style.flex = ratio + ' 1 0%';
-        });
-    </script>
-
-
-    <script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" src="../assets/built/jquery.fitvids.js%3Fv=90e7330248"></script>
-
-    <script src="../assets/built/infinitescroll.js%3Fv=90e7330248"></script>
-
-    <script>
-        // Parse the URL parameter
-        function getParameterByName(name, url) {
-            if (!url) url = window.location.href;
-            name = name.replace(/[\[\]]/g, "\\$&");
-            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, " "));
-        }
-
-        // Give the parameter a variable name
-        var action = getParameterByName('action');
-        var stripe = getParameterByName('stripe');
-
-        $(document).ready(function () {
-            if (action == 'subscribe') {
-                $('body').addClass("subscribe-success");
-            }
-            if (action == 'signup') {
-                window.location = 'http://localhost:2368/signup/?action=checkout';
-            }
-            if (action == 'checkout') {
-                $('body').addClass("signup-success");
-            }
-            if (action == 'signin') {
-                $('body').addClass("signin-success");
-            }
-            if (stripe == 'success') {
-                $('body').addClass("checkout-success");
-            }
-            if (stripe == 'billing-update-success') {
-                $('body').addClass("billing-success");
-            }
-            if (stripe == 'billing-update-cancel') {
-                $('body').addClass("billing-cancel");
-            }
-
-            $('.notification-close').click(function () {
-                $(this).parent().addClass('closed');
-                var uri = window.location.toString();
-                if (uri.indexOf("?") > 0) {
-                    var clean_uri = uri.substring(0, uri.indexOf("?"));
-                    window.history.replaceState({}, document.title, clean_uri);
-                }
-            });
-
-            // Reset form on opening subscrion overlay
-            $('.subscribe-button').click(function() {
-                $('.subscribe-overlay form').removeClass();
-                $('.subscribe-email').val('');
-            });
-
-            // Account navigation menu
-            $('.account-menu-avatar').click(function(event) {
-                $(this).toggleClass('active');
-                event.stopPropagation();
-            });
-
-            $('.account-menu-dropdown').click(function(event) {
-                event.stopPropagation();
-            });
-
-            $('body').click(function () {
-                $('.account-menu-avatar').removeClass('active');
-            });
-
-            $('.js-toggle-menu').click(function () {
-                $('body').toggleClass('has-menu');
-            });
-        });
-    </script>
-
-    <script>
-
-// NOTE: Scroll performance is poor in Safari
-// - this appears to be due to the events firing much more slowly in Safari.
-//   Dropping the scroll event and using only a raf loop results in smoother
-//   scrolling but continuous processing even when not scrolling
-$(document).ready(function () {
-    // Start fitVids
-    var $postContent = $(".post-full-content");
-    $postContent.fitVids();
-    // End fitVids
-
-    var nav = document.querySelector('.site-nav-main');
-    var title = document.querySelector('.post-full-title');
-
-    var lastScrollY = window.scrollY;
-    var lastWindowHeight = window.innerHeight;
-    var lastDocumentHeight = $(document).height();
-    var lastWindowWidth = window.innerWidth;
-    var ticking = false;
-
-    function onScroll() {
-        lastScrollY = window.scrollY;
-        requestTick();
-    }
-
-    function onResize() {
-        lastWindowWidth = window.innerWidth;
-        lastWindowHeight = window.innerHeight;
-        lastDocumentHeight = $(document).height();
-        requestTick();
-    }
-
-    function requestTick() {
-        if (!ticking) {
-            requestAnimationFrame(update);
-        }
-        ticking = true;
-    }
-
-    function update() {
-        var trigger = title.getBoundingClientRect().top + window.scrollY;
-        var triggerOffset = title.offsetHeight + 35;
-        var progressMax = lastDocumentHeight - lastWindowHeight;
-
-        // show/hide post title
-        if ((lastScrollY >= trigger + triggerOffset) && lastWindowWidth > 900) {
-            nav.classList.add('nav-post-title-active');
-        } else {
-            nav.classList.remove('nav-post-title-active');
-        }
-
-        ticking = false;
-    }
-
-    window.addEventListener('scroll', onScroll, {passive: true});
-    window.addEventListener('resize', onResize, false);
-
-    update();
-
-
-    // Hover on avatar
-    var hoverTimeout;
-
-    $('.author-list-item').hover(function () {
-        var $this = $(this);
-
-        clearTimeout(hoverTimeout);
-
-        $('.author-card').removeClass('hovered');
-        $(this).children('.author-card').addClass('hovered');
-
-    }, function () {
-        var $this = $(this);
-
-        hoverTimeout = setTimeout(function () {
-            $this.children('.author-card').removeClass('hovered');
-        }, 800);
-    });
-
-    // Prism Js
-    function loadScript (src) {
-        var scriptElement = document.createElement('script')
-        scriptElement.src = src
-        scriptElement.defer = true
-        scriptElement.async = true
-        document.body.appendChild(scriptElement)
-    }
-
-    if (document.querySelectorAll('code[class*=language-]').length) {
-      loadScript(prismJs)
-    }
-});
-</script>
-
+    <div class="post-box-body">
+        <div class="flow-meta u-fontSize13 text-muted">
 
     
+        <a href="../tag/research/index.html" class="flow-meta-cat u-lineHeight1 u-fontWeightMedium u-textUppercase u-relative zindex4">Research</a>
+        <span class="separate"></span>
+    
+
+    <span><time class="datetime u-textUppercase" datetime=" 2020-03-01 ">1 March 2020</time></span>
+</div>
+
+        <h2 class="post-box-title title-hover u-fontSizeLarge u-fontWeightMedium u-marginBottom10 u-lineHeightTight">
+            <a href="../final-year-thesis/index.html" class="u-block">Undergraduate Final Year Thesis</a>
+        </h2>
+
+    </div>
+</article>            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+        <div class="instagram js-instagram u-overflowHidden u-hide u-relative u-backgroundWhite u-bgGray"></div>
+
+
+        <footer class="footer">
+    <div class="extreme-container">
+        <div class="row">
+
+
+            <div class="col s12 m7 l8">
+                <div class="u-fontSizeSmaller u-marginBottom20">
+                    Copyright 2020, The Rational Optimist. All Rights Reserved.
+                    Design with  <svg class="icon icon--favorite animated infinite pulse"><use xlink:href="#icon-favorite"></use></svg> by <a href="https://godofredo.ninja" title="Developer FullStack.">@GodoFredoNinja</a>
+                </div>
+            </div>
+
+            <div class="col s12 m5 l4">
+                <aside class="footer-social-media js-social-media">
+                    <a title="Facebook ghost" href="https://www.facebook.com/ghost" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-facebook"></use></svg></a>
+                    <a title="Twitter @tryghost" href="https://twitter.com/tryghost" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-twitter"></use></svg></a>
+                </aside>
+            </div>
+        </div>
+    </div>
+</footer>    </div>
+
+    <div class="search u-fixed u-flexColumnTop u-flexCenter u-fixed u-absolute0">
+    <div class="js-search-close search-shader u-absolute0 zindex1"></div>
+    <div class="js-search-close search-close zindex3 u-hide-after-lg button button--circle button--dark"><svg class="icon"><use xlink:href="#icon-close"></use></svg></div>
+
+    <div class="search-inner u-relative u-marginAuto zindex2">
+        <div class="search-wrap">
+            <form class="search-form u-sizeFullWidth u-flex u-flexCenter u-fontSizeBase">
+                <svg class="icon icon--search top2"><use xlink:href="#icon-search"></use></svg>
+                <input id="search-field" class="input--md u-sizeFullWidth" type="text" placeholder="Search..." aria-label="Search box"/>
+            </form>
+            <span class="js-search-message search-message u-block u-hide">No results found</span>
+            <div id="search-results" class="search-results u-marginAuto u-sizeFullWidth"></div>
+        </div>
+        <div class="search-nav-hints u-flex u-flexEnd u-hide-before-lg">
+            <div class="search-nav-hint"><span>↑</span> <span>↓</span> Navigate up/down</div>
+            <div class="search-nav-hint"><span>Enter</span> Go to article</div>
+            <div class="search-nav-hint"><span>/</span> Search new term</div>
+            <div class="search-nav-hint"><span>Esc</span> Close search</div>
+        </div>
+    </div>
+</div>
+
+    <div class="loadingBar"></div>
+
+    <div class="back-to-top js-back-to-top u-hide-before-lg u-flexCenter justify-content-center u-fontSize40">
+        <svg class="icon icon--arrow-up"><use xlink:href="#icon-arrow-round"></use></svg>
+    </div>
+
+    
+
+    <script>
+        var siteUrl = 'http://localhost:2368';
+        var siteSearch = '/assets/scripts/search.js?v=23811bec1d';
+        var sitePrismJs = '/assets/scripts/prismjs.js?v=23811bec1d';
+        var sitePrismJscomponents = '/assets/scripts/components/';
+    </script>
+
+    <svg aria-hidden="true" style="position:absolute;width:0;height:0" version="1.1" xmlns="http://www.w3.org/2000/svg" overflow="hidden"><defs><symbol id="icon-moon" viewBox="0 0 20 24"><title>moon</title><path d="M16.902 17.451A9.002 9.002 0 0 1 6.429 8.572a8.97 8.97 0 0 1 1.393-4.781 8.53 8.53 0 0 0-6.107 8.21c0 4.728 3.844 8.571 8.571 8.571a8.614 8.614 0 0 0 6.616-3.121zm2.719-1.138a10.316 10.316 0 0 1-9.335 5.973C4.621 22.286 0 17.665 0 12A10.243 10.243 0 0 1 9.897 1.728a.839.839 0 0 1 .817.522.86.86 0 0 1-.201.964 7.175 7.175 0 0 0-2.371 5.357c0 4.018 3.268 7.286 7.286 7.286a7.16 7.16 0 0 0 3.054-.683.859.859 0 0 1 1.138 1.138z"/></symbol><symbol id="icon-reddit" viewBox="0 0 24 24"><title>reddit</title><path d="M24 11.33a2.66 2.66 0 0 1-1.46 2.384c.107.415.161.844.161 1.286 0 4.232-4.781 7.661-10.674 7.661-5.879 0-10.661-3.429-10.661-7.661 0-.429.054-.857.147-1.259A2.688 2.688 0 0 1 0 11.33a2.664 2.664 0 0 1 4.607-1.821c1.808-1.259 4.219-2.076 6.897-2.17L13.058.361a.469.469 0 0 1 .549-.348l4.942 1.085a2.003 2.003 0 1 1-.215.911l-4.473-.991-1.393 6.321c2.692.08 5.129.884 6.951 2.143a2.664 2.664 0 0 1 4.58 1.848zM5.598 13.996a2.003 2.003 0 1 0 4.006.012 2.003 2.003 0 0 0-4.006-.012zm10.848 4.754a.477.477 0 0 0 0-.696.484.484 0 0 0-.683 0c-.804.817-2.531 1.098-3.763 1.098s-2.96-.281-3.763-1.098a.484.484 0 0 0-.683 0 .477.477 0 0 0 0 .696c1.272 1.272 3.723 1.366 4.446 1.366s3.174-.094 4.446-1.366zm-.04-2.746a2.004 2.004 0 0 0 0-4.005 2.003 2.003 0 1 0 0 4.005z"/></symbol><symbol id="icon-twitter" viewBox="0 0 22 24"><title>twitter</title><path d="M21.696 5.464a9.294 9.294 0 0 1-2.17 2.237c.013.188.013.375.013.562 0 5.719-4.353 12.308-12.308 12.308-2.451 0-4.728-.71-6.643-1.942.348.04.683.054 1.045.054a8.667 8.667 0 0 0 5.371-1.848 4.334 4.334 0 0 1-4.045-3c.268.04.536.067.817.067.388 0 .777-.054 1.138-.147a4.327 4.327 0 0 1-3.469-4.246v-.054a4.367 4.367 0 0 0 1.955.549 4.325 4.325 0 0 1-1.929-3.603c0-.804.214-1.54.589-2.183a12.297 12.297 0 0 0 8.92 4.527 4.875 4.875 0 0 1-.107-.991 4.324 4.324 0 0 1 4.326-4.326c1.246 0 2.371.522 3.161 1.366a8.523 8.523 0 0 0 2.746-1.045 4.313 4.313 0 0 1-1.902 2.384 8.673 8.673 0 0 0 2.491-.67z"/></symbol><symbol id="icon-github" viewBox="0 0 21 24"><title>github</title><path d="M10.286 1.714c5.679 0 10.286 4.607 10.286 10.286 0 4.54-2.946 8.397-7.031 9.763-.522.094-.71-.228-.71-.496 0-.335.013-1.446.013-2.826 0-.964-.321-1.58-.696-1.902 2.29-.254 4.701-1.125 4.701-5.076a3.985 3.985 0 0 0-1.058-2.759c.107-.268.455-1.313-.107-2.732-.857-.268-2.826 1.058-2.826 1.058a9.671 9.671 0 0 0-5.142 0S5.747 5.704 4.89 5.972c-.563 1.42-.214 2.464-.107 2.732a3.985 3.985 0 0 0-1.058 2.759c0 3.937 2.397 4.821 4.688 5.076-.295.268-.562.723-.656 1.379-.589.268-2.089.723-2.987-.857-.563-.978-1.58-1.058-1.58-1.058-1.004-.013-.067.629-.067.629.67.308 1.138 1.5 1.138 1.5.603 1.835 3.469 1.219 3.469 1.219 0 .857.013 1.661.013 1.915 0 .268-.188.589-.71.496C2.948 20.396.002 16.539.002 11.999c0-5.679 4.607-10.286 10.286-10.286zM3.897 16.487c.027-.054-.013-.121-.094-.161-.08-.027-.147-.013-.174.027-.027.054.013.121.094.161.067.04.147.027.174-.027zm.416.455c.054-.04.04-.134-.027-.214-.067-.067-.161-.094-.214-.04-.054.04-.04.134.027.214.067.067.161.094.214.04zm.401.603c.067-.054.067-.161 0-.254-.054-.094-.161-.134-.228-.08-.067.04-.067.147 0 .241s.174.134.228.094zm.563.562c.054-.054.027-.174-.054-.254-.094-.094-.214-.107-.268-.04-.067.054-.04.174.054.254.094.094.214.107.268.04zm.763.335c.027-.08-.054-.174-.174-.214-.107-.027-.228.013-.254.094s.054.174.174.201c.107.04.228 0 .254-.08zm.844.067c0-.094-.107-.161-.228-.147-.121 0-.214.067-.214.147 0 .094.094.161.228.147.121 0 .214-.067.214-.147zm.777-.134c-.013-.08-.121-.134-.241-.121-.121.027-.201.107-.188.201.013.08.121.134.241.107s.201-.107.188-.188z"/></symbol><symbol id="icon-linkedin" viewBox="0 0 21 24"><title>linkedin</title><path d="M4.674 8.371v13.272H.254V8.371h4.42zm.281-4.099c.013 1.272-.951 2.29-2.491 2.29h-.027c-1.487 0-2.438-1.018-2.438-2.29 0-1.299.991-2.29 2.491-2.29 1.513 0 2.451.991 2.464 2.29zm15.616 9.764v7.607h-4.406v-7.098c0-1.781-.643-3-2.237-3-1.219 0-1.942.817-2.263 1.607-.107.295-.147.683-.147 1.085v7.406H7.112c.054-12.027 0-13.272 0-13.272h4.406V10.3h-.027c.576-.911 1.621-2.237 4.004-2.237 2.906 0 5.076 1.902 5.076 5.973z"/></symbol><symbol id="icon-youtube" viewBox="0 0 24 24"><title>youtube</title><path d="M9.522 15.107l6.482-3.348-6.482-3.388v6.737zM12 3.563c5.049 0 8.397.241 8.397.241.469.054 1.5.054 2.411 1.018 0 0 .737.723.951 2.384.254 1.942.241 3.884.241 3.884v1.821s.013 1.942-.241 3.884c-.214 1.647-.951 2.384-.951 2.384-.911.951-1.942.951-2.411 1.004 0 0-3.348.254-8.397.254-6.241-.054-8.156-.241-8.156-.241-.536-.094-1.741-.067-2.652-1.018 0 0-.737-.737-.951-2.384C-.013 14.852 0 12.91 0 12.91v-1.821s-.013-1.942.241-3.884c.214-1.661.951-2.384.951-2.384.911-.964 1.942-.964 2.411-1.018 0 0 3.348-.241 8.397-.241z"/></symbol><symbol id="icon-instagram" viewBox="0 0 21 24"><title>instagram</title><path d="M13.714 12c0-1.888-1.54-3.429-3.429-3.429S6.856 10.111 6.856 12s1.54 3.429 3.429 3.429 3.429-1.54 3.429-3.429zm1.849 0c0 2.92-2.357 5.277-5.277 5.277S5.009 14.92 5.009 12s2.357-5.277 5.277-5.277S15.563 9.08 15.563 12zm1.446-5.491c0 .683-.549 1.232-1.232 1.232s-1.232-.549-1.232-1.232.549-1.232 1.232-1.232 1.232.549 1.232 1.232zm-6.723-2.946c-1.5 0-4.714-.121-6.067.415-.469.188-.817.415-1.179.777s-.589.71-.777 1.179c-.536 1.353-.415 4.567-.415 6.067s-.121 4.714.415 6.067c.188.469.415.817.777 1.179s.71.589 1.179.777c1.353.536 4.567.415 6.067.415s4.714.121 6.067-.415c.469-.188.817-.415 1.179-.777s.589-.71.777-1.179c.536-1.353.415-4.567.415-6.067s.121-4.714-.415-6.067c-.188-.469-.415-.817-.777-1.179s-.71-.589-1.179-.777c-1.353-.536-4.567-.415-6.067-.415zM20.571 12c0 1.42.013 2.826-.067 4.246-.08 1.647-.455 3.107-1.661 4.313s-2.665 1.58-4.313 1.661c-1.42.08-2.826.067-4.246.067s-2.826.013-4.246-.067c-1.647-.08-3.107-.455-4.313-1.661S.145 17.894.064 16.246c-.08-1.42-.067-2.826-.067-4.246s-.013-2.826.067-4.246c.08-1.647.455-3.107 1.661-4.313S4.39 1.861 6.038 1.78c1.42-.08 2.826-.067 4.246-.067s2.826-.013 4.246.067c1.647.08 3.107.455 4.313 1.661s1.58 2.665 1.661 4.313c.08 1.42.067 2.826.067 4.246z"/></symbol><symbol id="icon-facebook" viewBox="0 0 21 24"><title>facebook</title><path d="M19.433 1.714c.629 0 1.138.509 1.138 1.138v18.295c0 .629-.509 1.138-1.138 1.138h-5.237v-7.969h2.665l.402-3.107h-3.067V9.227c0-.897.241-1.5 1.54-1.5l1.634-.013V4.942c-.281-.04-1.259-.121-2.384-.121-2.371 0-4.004 1.446-4.004 4.098v2.29H8.303v3.107h2.679v7.969H1.138A1.137 1.137 0 0 1 0 21.147V2.852c0-.629.509-1.138 1.138-1.138h18.295z"/></symbol><symbol id="icon-pinterest" viewBox="0 0 17 24"><title>pinterest</title><path d="M0 7.996C0 3.054 4.527 0 9.107 0c4.205 0 8.036 2.893 8.036 7.326 0 4.165-2.129 8.786-6.871 8.786-1.125 0-2.545-.563-3.094-1.607-1.018 4.031-.938 4.634-3.188 7.714l-.188.067-.121-.134c-.08-.844-.201-1.674-.201-2.518 0-2.732 1.259-6.683 1.875-9.335-.335-.683-.429-1.513-.429-2.263 0-1.353.938-3.067 2.464-3.067 1.125 0 1.728.857 1.728 1.915 0 1.741-1.179 3.375-1.179 5.063 0 1.152.951 1.955 2.062 1.955 3.08 0 4.031-4.446 4.031-6.817 0-3.174-2.25-4.902-5.29-4.902-3.536 0-6.268 2.545-6.268 6.134 0 1.728 1.058 2.612 1.058 3.027 0 .348-.254 1.58-.696 1.58-.067 0-.161-.027-.228-.04C.693 12.308-.004 9.75-.004 7.996z"/></symbol><symbol id="icon-whatsapp" viewBox="0 0 21 24"><title>whatsapp</title><path d="M13.192 13.045c.228 0 2.411 1.138 2.504 1.299.027.067.027.147.027.201 0 .335-.107.71-.228 1.018-.308.75-1.554 1.232-2.317 1.232-.643 0-1.969-.563-2.545-.83-1.915-.871-3.107-2.357-4.259-4.058-.509-.75-.964-1.674-.951-2.598v-.107c.027-.884.348-1.513.991-2.116.201-.188.415-.295.696-.295.161 0 .321.04.496.04.362 0 .429.107.563.455.094.228.777 2.049.777 2.183 0 .509-.924 1.085-.924 1.393a.4.4 0 0 0 .067.201c.295.629.857 1.353 1.366 1.835.616.589 1.272.978 2.022 1.353a.587.587 0 0 0 .295.094c.402 0 1.071-1.299 1.42-1.299zm-2.719 7.098c4.634 0 8.411-3.777 8.411-8.411s-3.777-8.411-8.411-8.411-8.411 3.777-8.411 8.411c0 1.768.563 3.496 1.607 4.929l-1.058 3.121 3.241-1.031a8.47 8.47 0 0 0 4.621 1.393zm0-18.509c5.571 0 10.098 4.527 10.098 10.098S16.044 21.83 10.473 21.83c-1.701 0-3.388-.429-4.888-1.259L0 22.366l1.821-5.424a10.048 10.048 0 0 1-1.446-5.21c0-5.571 4.527-10.098 10.098-10.098z"/></symbol><symbol id="icon-sunny" viewBox="0 0 24 24"><title>sunny</title><path d="M12 18.141a.722.722 0 0 0-.722.722v2.166a.722.722 0 0 0 1.444 0v-2.166a.722.722 0 0 0-.722-.722zM12 2.25a.722.722 0 0 0-.722.722v2.166a.722.722 0 0 0 1.444 0V2.972A.722.722 0 0 0 12 2.25zM5.859 12a.722.722 0 0 0-.722-.722H2.971a.722.722 0 0 0 0 1.444h2.166A.722.722 0 0 0 5.859 12zm15.169-.722h-2.166a.722.722 0 0 0 0 1.444h2.166a.722.722 0 0 0 0-1.444zM7.148 16.13a.72.72 0 0 0-.511.211l-1.533 1.533a.72.72 0 0 0 0 1.022.72.72 0 0 0 1.022 0l1.533-1.533a.72.72 0 1 0-.511-1.233zm9.704-8.26a.72.72 0 0 0 .511-.211l1.533-1.533a.72.72 0 0 0 0-1.022.72.72 0 0 0-1.022 0l-1.533 1.533a.72.72 0 0 0 0 1.022.72.72 0 0 0 .511.211zM6.127 5.105a.72.72 0 0 0-1.022 0 .72.72 0 0 0 0 1.022L6.638 7.66a.72.72 0 0 0 1.022 0 .72.72 0 0 0 0-1.022L6.127 5.105zm11.235 11.236a.72.72 0 0 0-1.022 0 .725.725 0 0 0 0 1.022l1.533 1.533a.72.72 0 0 0 1.022 0 .72.72 0 0 0 0-1.022l-1.533-1.533zM12 7.5c-2.48 0-4.5 2.02-4.5 4.5s2.02 4.5 4.5 4.5 4.5-2.02 4.5-4.5-2.02-4.5-4.5-4.5z"/></symbol><symbol id="icon-user" viewBox="0 0 24 24"><title>user</title><path d="M12 2.25a9.747 9.747 0 0 0-9.694 10.777A9.744 9.744 0 0 0 12 21.75c5.386 0 9.75-4.364 9.75-9.75S17.386 2.25 12 2.25zm6.366 15.286a66.54 66.54 0 0 0-3.862-1.313c-.112-.033-.127-.042-.127-.502 0-.38.154-.764.31-1.092.169-.352.361-.947.431-1.481.197-.229.469-.679.637-1.542.15-.759.08-1.036-.019-1.294-.009-.028-.023-.056-.029-.079-.038-.178.014-1.102.145-1.819.089-.492-.023-1.538-.698-2.405-.427-.548-1.247-1.219-2.742-1.313h-.82c-1.472.094-2.287.764-2.719 1.313-.68.867-.792 1.913-.704 2.405.131.717.183 1.641.146 1.819-.009.033-.019.056-.028.085-.098.258-.173.535-.019 1.294.173.863.441 1.313.637 1.542.071.534.267 1.125.431 1.481.122.258.178.61.178 1.106 0 .464-.019.469-.122.502a51.313 51.313 0 0 0-3.75 1.303A8.364 8.364 0 0 1 3.561 12c0-2.255.877-4.373 2.471-5.967s3.713-2.471 5.967-2.471c2.255 0 4.373.877 5.967 2.471S20.437 9.745 20.437 12a8.356 8.356 0 0 1-2.072 5.536z"/></symbol><symbol id="icon-search" viewBox="0 0 24 24"><title>search</title><path d="M16.639 15.641a1 1 0 0 0-.696 1.716l4.35 4.35a1 1 0 1 0 1.414-1.414l-4.35-4.35a.997.997 0 0 0-.717-.303h-.002zM11 2c-4.959 0-9 4.041-9 9s4.041 9 9 9 9-4.041 9-9-4.041-9-9-9zm0 2c3.878 0 7 3.122 7 7s-3.122 7-7 7-7-3.122-7-7 3.122-7 7-7z"/></symbol><symbol id="icon-arrow-round" viewBox="0 0 24 24"><title>arrow-round</title><path d="M16.327 10.144a.614.614 0 0 1-.863.005l-2.855-2.845v10.842c0 .333-.272.605-.609.605s-.609-.272-.609-.605V7.304l-2.855 2.85a.617.617 0 0 1-.863-.005.608.608 0 0 1 .005-.858l3.891-3.862c.056-.052.117-.094.192-.127s.155-.047.234-.047c.159 0 .309.061.427.173l3.891 3.862c.244.23.248.614.014.853z"/></symbol><symbol id="icon-send" viewBox="0 0 24 24"><title>send</title><path d="M20.433 3.042l-17.208 7.5a.394.394 0 0 0 .014.717l4.655 2.63a.75.75 0 0 0 .858-.084l9.178-7.913c.061-.052.206-.15.263-.094.061.061-.033.202-.084.263l-7.941 8.944a.748.748 0 0 0-.075.895l3.042 4.88c.15.295.577.291.712-.009l7.116-17.208a.394.394 0 0 0-.53-.52z"/></symbol><symbol id="icon-globe" viewBox="0 0 24 24"><title>globe</title><path d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.01 18.047a8.3 8.3 0 0 1-4.899-2.387 8.303 8.303 0 0 1-2.448-5.909c0-2.01.705-3.911 1.997-5.422.033.399.115.827.094 1.133-.077 1.115-.187 1.813.466 2.754.254.367.317.892.441 1.316.121.415.605.633.938.888.673.516 1.317 1.116 2.031 1.57.471.3.765.449.627 1.024-.111.462-.142.747-.381 1.159-.073.126.275.934.391 1.05.351.351.7.674 1.083.99.594.491-.058 1.128-.341 1.834zm6.919-2.388a8.297 8.297 0 0 1-4.339 2.301 3.47 3.47 0 0 1 1.026-1.376c.333-.257.749-.75.923-1.141s.404-.729.636-1.088c.331-.511-.817-1.281-1.188-1.443-.837-.363-1.467-.854-2.211-1.377-.53-.373-1.606.195-2.204-.066-.819-.358-1.495-.98-2.207-1.516-.735-.554-.699-1.199-.699-2.015.576.021 1.395-.159 1.777.304.121.146.535.799.813.567.227-.19-.168-.949-.244-1.128-.235-.549.535-.763.928-1.136.514-.486 1.616-1.248 1.529-1.596s-1.103-1.335-1.699-1.181c-.089.023-.876.848-1.028.978l.012-.808c.003-.17-.317-.345-.302-.454.037-.277.809-.78 1.001-1.001-.134-.084-.593-.478-.732-.42-.336.14-.716.237-1.052.377 0-.117-.014-.226-.031-.334a8.056 8.056 0 0 1 2.078-.611l.046-.006.66.265.466.553.465.48.407.131.646-.609-.167-.435v-.391a8.269 8.269 0 0 1 3.54 1.397c-.189.017-.397.045-.631.075-.097-.057-.221-.083-.326-.123.306.658.625 1.307.95 1.957.347.694 1.115 1.438 1.25 2.17.159.863.049 1.647.136 2.663.084.978 1.103 2.089 1.103 2.089s.47.16.862.104a8.306 8.306 0 0 1-2.192 3.846z"/></symbol><symbol id="icon-star" viewBox="0 0 24 24"><title>star</title><path d="M21.703 9h-6.895l-2.095-6.253c-.103-.305-.389-.497-.712-.497s-.609.192-.712.497L9.194 9H2.252a.752.752 0 0 0-.75.75c0 .042.005.089.014.127.009.164.084.347.314.53l5.667 3.994-2.175 6.323a.752.752 0 0 0 .258.844c.136.098.262.183.422.183.155 0 .337-.08.469-.169l5.531-3.942 5.531 3.942a.876.876 0 0 0 .469.169c.159 0 .286-.08.417-.183a.742.742 0 0 0 .258-.844l-2.175-6.323 5.62-4.031.136-.117c.122-.131.244-.309.244-.502 0-.413-.384-.75-.797-.75z"/></symbol><symbol id="icon-link" viewBox="0 0 24 24"><title>link</title><path d="M13.125 15.989l-.056.005a.778.778 0 0 0-.45.211l-3.028 3.028c-.642.642-1.5.994-2.414.994s-1.772-.352-2.414-.994c-.642-.642-.994-1.5-.994-2.414s.352-1.772.994-2.414l3.216-3.216a3.425 3.425 0 0 1 1.228-.788c.225-.084.464-.141.703-.173a3.38 3.38 0 0 1 .478-.033c.066 0 .131.005.216.009.83.052 1.613.403 2.194.984.361.361.638.802.802 1.28a.737.737 0 0 0 .905.473c.005 0 .009-.005.014-.005s.009 0 .009-.005c.38-.117.6-.516.492-.895-.206-.731-.572-1.345-1.153-1.922a4.935 4.935 0 0 0-2.7-1.373 4.768 4.768 0 0 0-1.148-.052 4.744 4.744 0 0 0-.759.117c-.052.009-.098.023-.15.037a4.882 4.882 0 0 0-2.212 1.275l-3.216 3.216c-.919.933-1.43 2.17-1.43 3.492s.511 2.559 1.439 3.487a4.91 4.91 0 0 0 3.483 1.434 4.898 4.898 0 0 0 3.488-1.439l3.061-3.061c.487-.492.094-1.327-.595-1.261z"/><path d="M20.311 3.689c-.928-.928-2.166-1.439-3.483-1.439s-2.559.511-3.487 1.439l-2.986 2.986a.753.753 0 0 0 .473 1.284.759.759 0 0 0 .595-.216l2.991-2.981c.642-.642 1.5-.994 2.414-.994s1.772.352 2.414.994c.642.642.994 1.5.994 2.414s-.352 1.772-.994 2.414l-3.216 3.216a3.425 3.425 0 0 1-1.228.788 3.255 3.255 0 0 1-.703.173 3.38 3.38 0 0 1-.478.033c-.066 0-.136-.005-.216-.009a3.406 3.406 0 0 1-2.194-.984c-.342-.342-.6-.75-.769-1.195a.748.748 0 0 0-.895-.459.758.758 0 0 0-.53.961c.211.656.567 1.214 1.111 1.758l.009.009a4.935 4.935 0 0 0 3.853 1.425 4.882 4.882 0 0 0 3.117-1.425l3.216-3.216c.928-.928 1.439-2.166 1.439-3.487s-.52-2.559-1.448-3.488z"/></symbol><symbol id="icon-chat" viewBox="0 0 20 20"><title>chat</title><path d="M15.651 11.67V3.866c0-.771-.625-1.398-1.398-1.398H2.021A1.397 1.397 0 0 0 .623 3.866v7.804c0 .772.626 1.398 1.398 1.398h2.331v3.211l3.565-3.211h6.336c.773 0 1.398-.626 1.398-1.398zm2.327-6.134h-1.749v6.818c0 .586-.76 1.339-1.346 1.339s-6.841.034-6.841.034c0 .772.626 1.241 1.398 1.241h2.693l3.514 3.189-.004-3.189h2.335c.773 0 1.398-.469 1.398-1.241V6.895c0-.771-.625-1.359-1.398-1.359z"/></symbol><symbol id="icon-arrow" viewBox="0 0 24 24"><title>arrow</title><path d="M7.406 8.578L12 13.172l4.594-4.594L18 9.984l-6 6-6-6z"/></symbol><symbol id="icon-close" viewBox="0 0 24 24"><title>close</title><path d="M18.984 6.422L13.406 12l5.578 5.578-1.406 1.406L12 13.406l-5.578 5.578-1.406-1.406L10.594 12 5.016 6.422l1.406-1.406L12 10.594l5.578-5.578z"/></symbol><symbol id="icon-favorite" viewBox="0 0 24 24"><title>favorite</title><path d="M12 21.328l-1.453-1.313c-5.156-4.688-8.531-7.734-8.531-11.531C2.016 5.39 4.407 3 7.5 3c1.734 0 3.422.844 4.5 2.109C13.078 3.843 14.766 3 16.5 3c3.094 0 5.484 2.391 5.484 5.484 0 3.797-3.375 6.891-8.531 11.578z"/></symbol><symbol id="icon-rss" viewBox="0 0 24 24"><title>rss</title><path d="M3.984 10.078c5.484 0 9.938 4.453 9.938 9.938h-2.859c0-3.891-3.188-7.078-7.078-7.078v-2.859zm0-5.625c8.578 0 15.563 6.984 15.563 15.563h-2.813c0-7.031-5.719-12.75-12.75-12.75V4.453zm0 13.36c0-1.219.984-2.156 2.203-2.156s2.156.938 2.156 2.156-.938 2.203-2.156 2.203-2.203-.984-2.203-2.203z"/></symbol></defs></svg>
+    
+
+    <script src="../assets/scripts/main.js%3Fv=23811bec1d"></script>
+
+    
+
+    <script>
+    (function (d, s, id) {
+        if (typeof disqusShortName === 'undefined') return;
+
+        var disqus_config = function () {
+            this.page.url = 'http://localhost:2368/building-my-personal-blog/';
+            this.page.identifier = 'ghost-5eb88399e47c331b90bb7d51';
+        };
+
+        var commentShow = d.querySelectorAll('.post-comments-show');
+        commentShow.forEach(function(item){item.classList.remove('u-hide')});
+
+        // Disqus Comments Count
+        var count = d.createElement(s);
+        count.src = 'https://'+disqusShortName+'.disqus.com/count.js';
+        count.id = 'dsq-count-scr';
+        count.async = true;
+        count.defer = true;
+        d.body.appendChild(count);
+
+        // Toggle Comments
+        var toggleComments = d.querySelectorAll('.js-toggle-comments')
+        toggleComments.forEach(function(item) { item.addEventListener('click', function (e) {
+            e.preventDefault();
+            d.body.classList.toggle('has-comments');
+
+            if (d.getElementById(id)) return;
+
+            setTimeout(function(){
+                d.querySelector('.js-disqus-loanding').remove();
+                d.querySelector('.js-disqus').classList.remove('u-hide');
+            }, 2000);
+
+            var js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://'+disqusShortName+'.disqus.com/embed.js';
+            js.async = true;
+            js.defer = true;
+            js.setAttribute('data-timestamp', +new Date());
+            d.body.appendChild(js);
+        })})
+    }(document, 'script', 'disqus-js'));
+</script>
 
 </body>
 </html>
